@@ -40,7 +40,7 @@ Liste links, tutoriais, ou materiais usados como base para desenvolver o jogo, i
 
 ## Créditos
 Liste todos os membros da equipe, suas funções e contribuições:
-- **Desenvolvimento**: Nome - Programador
+- **Desenvolvimento**: [Pedro Henrique](https://github.com/phln1108) - Programador, [Lucas Holanda]()
 - **Arte**: Nome - Artista
 - **Som**: Nome - Design de Áudio
 - **Game Design**: Nome - Game Designer
