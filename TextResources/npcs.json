@@ -1,0 +1,61 @@
+{
+  "npcs": [
+	{
+	  "start_dialogue": [
+		"O que traz um homem branco para estas terras distantes?",
+		"O sol brilha forte hoje, estrangeiro. O que procuras?",
+		"Os espíritos da floresta sussurram sobre os vossos barcos."
+	  ],
+	  "yes": [
+		"Então estás em busca de novas terras? Muitos já tentaram.",
+		"Se assim é, os caminhos podem ser árduos, mas as recompensas são grandes.",
+		"Os deuses te guiarão se teu coração for verdadeiro."
+	  ],
+	  "no": [
+		"Talvez não estejas pronto para entender os segredos da mata.",
+		"Se não queres avançar, que os ventos te levem para longe.",
+		"Os caminhos do medo não te levarão à sabedoria."
+	  ],
+	  "weight": -1,
+	  "image": "res://indigena_ancião.svg"
+	},
+	{
+	  "start_dialogue": [
+		"A coroa espera respostas para o que encontraremos aqui.",
+		"A navegação trouxe-nos até estas águas, mas o que o futuro nos reserva?",
+		"Já viste terras tão vastas? Estas florestas são misteriosas."
+	  ],
+	  "yes": [
+		"Então estamos de acordo, devemos explorar cada canto destas terras.",
+		"Confiante, é assim que avançamos. A coroa espera muito de nós.",
+		"Se é o que desejas, a jornada será longa, mas promissora."
+	  ],
+	  "no": [
+		"Não estás preparado para o que encontraremos. A cautela é sábia.",
+		"Talvez seja melhor esperar e observar antes de prosseguir.",
+		"A hesitação é compreensível, mas a coroa exige avanços."
+	  ],
+	  "weight": 1,
+	  "image": "res://portugues_navegador.svg"
+	},
+	{
+	  "start_dialogue": [
+		"Estrangeiro, estás perdido nas terras de Tupã?",
+		"O vento traz novos cheiros. Quem és tu?",
+		"A floresta guarda muitos mistérios. Estás aqui por acaso ou destino?"
+	  ],
+	  "yes": [
+		"Então segue os caminhos do vento e encontrarás o que procuras.",
+		"As árvores são antigas e sábias. Elas guiam aqueles que escutam.",
+		"Caminha com cuidado, estrangeiro, pois a floresta observa."
+	  ],
+	  "no": [
+		"Se o medo te domina, a floresta te devorará.",
+		"Volta ao mar, se teu coração não for forte o bastante.",
+		"Aqueles que não têm propósito vagam até se perderem."
+	  ],
+	  "weight": 0,
+	  "image": "res://indigena_guerreiro.svg"
+	}
+  ]
+}
