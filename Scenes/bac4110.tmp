@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnn31tmtaaov2"]
+
+[ext_resource type="Script" path="res://Scripts/scroller.gd" id="1_ajw67"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ri6pi"]
+size = Vector2(1152, 108)
+
+[node name="Backpack" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ajw67")
+
+[node name="Scroller" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Scroller"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scroller/Area2D"]
+position = Vector2(576, 54)
+shape = SubResource("RectangleShape2D_ri6pi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.136, 0.606, 0.564, 0.433)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+vertical_scroll_mode = 0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
