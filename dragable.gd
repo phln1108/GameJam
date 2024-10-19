@@ -2,9 +2,13 @@ extends Sprite2D
 class_name Draggable
 
 @export var drag_delay: float = .2
+@export var item: Item
 
 var is_dragging: bool = false
 var mouse_offset: Vector2
+
+func _ready() -> void:
+	texture = load(item.name)
 
 func _physics_process(delta):
 	if is_dragging:

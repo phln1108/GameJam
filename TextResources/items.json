@@ -1,54 +1,87 @@
 {
-  "items": [
-	{
-	  "name": "pau-brasil",
-	  "id": 1,
-	  "image": "res://pau_brasil.svg"
-	},
-	{
-	  "name": "canoa",
-	  "id": 2,
-	  "image": "res://canoa.svg"
-	},
-	{
-	  "name": "arco e flecha",
-	  "id": 3,
-	  "image": "res://arco_flecha.svg"
-	},
-	{
-	  "name": "cocar",
-	  "id": 4,
-	  "image": "res://cocar.svg"
-	},
-	{
-	  "name": "escudo português",
-	  "id": 5,
-	  "image": "res://escudo_portugues.svg"
-	},
-	{
-	  "name": "espada portuguesa",
-	  "id": 6,
-	  "image": "res://espada_portuguesa.svg"
-	},
-	{
-	  "name": "cruz de madeira",
-	  "id": 7,
-	  "image": "res://cruz_madeira.svg"
-	},
-	{
-	  "name": "pote de cerâmica indígena",
-	  "id": 8,
-	  "image": "res://pote_ceramica.svg"
-	},
-	{
-	  "name": "rede de dormir",
-	  "id": 9,
-	  "image": "res://rede_dormir.svg"
-	},
-	{
-	  "name": "machete",
-	  "id": 10,
-	  "image": "res://machete.svg"
-	}
-  ]
+	"collectables": [
+		{
+			"id": 1,
+			"name": "pau-brasil",
+			"image": "res://pau_brasil.svg",
+			"description": "",
+		},
+		{
+			"id": 8,
+			"name": "pote de cerâmica indígena",
+			"image": "res://pote_ceramica.svg",
+			"description": "",
+		},
+		
+	],
+	
+	"craftables": [
+		{
+			"id": 2,
+			"name": "canoa",
+			"image": "res://canoa.svg",
+			"craft": [],
+			"know": false,
+			"description": "",
+		},
+		{
+			"id": 3,
+			"name": "arco e flecha",
+			"image": "res://arco_flecha.svg",
+			"craft": [],
+			"know": false,
+			"description": "",
+		},
+		{
+			"id": 4,
+			"name": "cocar",
+			"image": "res://cocar.svg",
+			"craft": [],
+			"know": false,
+			"craft": [],
+			"know": false,
+			"description": "",
+		},
+		{
+			"id": 5,
+			"name": "escudo português",
+			"image": "res://escudo_portugues.svg",
+			"craft": [],
+			"know": false,
+			"description": "",
+		},
+		{
+			"id": 6,
+			"name": "espada portuguesa",
+			"image": "res://espada_portuguesa.svg",
+			"craft": [],
+			"know": false,
+			"description": "",
+		},
+		{
+			"id": 7,
+			"name": "cruz de madeira",
+			"image": "res://cruz_madeira.svg",
+			"craft": [],
+			"know": false,
+			"description": "",
+		},
+		{
+			"id": 10,
+			"name": "machete",
+			"image": "res://machete.svg",
+			"craft": [],
+			"know": false,
+			"description": "",
+		},
+		{
+			"id": 9,
+			"name": "rede de dormir",
+			"image": "res://rede_dormir.svg",
+			"craft": [],
+			"know": false,
+			"description": "",
+		},
+	]
+	
 }
