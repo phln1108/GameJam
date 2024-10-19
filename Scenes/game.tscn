@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdpkl7bhedquv"]
+
+[ext_resource type="Texture2D" uid="uid://be36d1o617up6" path="res://Sprites/tenda.png" id="1_xbmcg"]
+
+[node name="Game" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.28
+anchor_right = 0.72
+anchor_bottom = 1.0
+offset_left = -0.808014
+offset_right = -0.472046
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("1_xbmcg")
+expand_mode = 5
+stretch_mode = 4
