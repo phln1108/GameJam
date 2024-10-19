@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://uko66pvsvtf5"]
+
+[ext_resource type="Script" path="res://Scripts/dialogue_box.gd" id="1_a4acm"]
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -188.5
+offset_right = 188.5
+offset_bottom = 100.0
+grow_horizontal = 2
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+autowrap_mode = 3
+script = ExtResource("1_a4acm")
+dialogue_text = "Teste de diálogo muito legal e bonito"
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="Label"]
+wait_time = 0.05
+
+[connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
