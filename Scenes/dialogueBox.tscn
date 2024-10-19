@@ -1,32 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0b0mii5uu2bn"]
+[gd_scene load_steps=2 format=3 uid="uid://syip5gjrcc0e"]
 
-[ext_resource type="Script" path="res://Scripts/dialogue_box.gd" id="1_a4acm"]
+[sub_resource type="GDScript" id="GDScript_g18ni"]
+script/source = "extends Label
 
-[node name="DialogueBox" type="Control"]
-layout_mode = 3
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -188.5
-offset_right = 188.5
-offset_bottom = 100.0
-grow_horizontal = 2
-metadata/_edit_group_ = true
-metadata/_edit_use_anchors_ = true
+@onready var timer: Timer = $Timer
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-autowrap_mode = 3
-script = ExtResource("1_a4acm")
-dialogue_text = "Teste de diálogo muito legal e bonito"
-metadata/_edit_use_anchors_ = true
+signal finished_dialogue
 
-[node name="Timer" type="Timer" parent="Label"]
+@export var dialogues: Array[String]
+var dialogue_text: String
+
+var current_char: int = 0
+var current_dialogue: int = 0
+
+var is_typing: bool = false
+
+func _ready() -> void:
+	dialogue_text = dialogues[current_dialogue]
+	show_dialogue()
+	
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed(\"skip_dialogue\"):
+		if is_typing:
+			text = dialogue_text
+			is_typing = false
+		else:
+			if current_dialogue < len(dialogues) - 1:
+				current_dialogue += 1
+				dialogue_text =  dialogues[current_dialogue]
+				show_dialogue()
+			else:
+				finished_dialogue.emit()
+	
+
+func show_dialogue():
+	text = \"\"
+	current_char = 0
+	is_typing = true
+	
+	_type()
+
+func _type():
+	if is_typing:
+		if current_char == dialogue_text.length():
+			is_typing = false
+		else:
+			text += dialogue_text[current_char]
+			current_char += 1
+			timer.start()
+		
+
+
+func _on_timer_timeout() -> void:
+	if is_typing:
+		_type()
+"
+
+[node name="DialogueBox" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = SubResource("GDScript_g18ni")
+
+[node name="Timer" type="Timer" parent="."]
 wait_time = 0.05
 
-[connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
