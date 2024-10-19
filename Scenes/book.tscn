@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqbps2eaycq4l"]
+
+[ext_resource type="Script" path="res://Scripts/book.gd" id="2_mtr6s"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(616, 326)
+scale = Vector2(2.94531, 5.07812)
+script = ExtResource("2_mtr6s")

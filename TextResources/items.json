@@ -1,0 +1,54 @@
+{
+  "items": [
+	{
+	  "name": "pau-brasil",
+	  "id": 1,
+	  "image": "res://pau_brasil.svg"
+	},
+	{
+	  "name": "canoa",
+	  "id": 2,
+	  "image": "res://canoa.svg"
+	},
+	{
+	  "name": "arco e flecha",
+	  "id": 3,
+	  "image": "res://arco_flecha.svg"
+	},
+	{
+	  "name": "cocar",
+	  "id": 4,
+	  "image": "res://cocar.svg"
+	},
+	{
+	  "name": "escudo português",
+	  "id": 5,
+	  "image": "res://escudo_portugues.svg"
+	},
+	{
+	  "name": "espada portuguesa",
+	  "id": 6,
+	  "image": "res://espada_portuguesa.svg"
+	},
+	{
+	  "name": "cruz de madeira",
+	  "id": 7,
+	  "image": "res://cruz_madeira.svg"
+	},
+	{
+	  "name": "pote de cerâmica indígena",
+	  "id": 8,
+	  "image": "res://pote_ceramica.svg"
+	},
+	{
+	  "name": "rede de dormir",
+	  "id": 9,
+	  "image": "res://rede_dormir.svg"
+	},
+	{
+	  "name": "machete",
+	  "id": 10,
+	  "image": "res://machete.svg"
+	}
+  ]
+}
