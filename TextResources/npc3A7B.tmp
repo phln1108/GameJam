@@ -1,0 +1,26 @@
+{
+  "npcs": [
+	{
+	  "start_dialogue": [
+		"O que traz um homem branco para estas terras distantes?",
+		"O sol brilha forte hoje, estrangeiro. O que procuras?",
+		"Os espíritos da floresta sussurram sobre os vossos barcos."
+	  ],
+	  "yes": [
+		"Então estás em busca de novas terras? Muitos já tentaram.",
+		"Se assim é, os caminhos podem ser árduos, mas as recompensas são grandes.",
+		"Os deuses te guiarão se teu coração for verdadeiro."
+	  ],
+	  "no": [
+		"Talvez não estejas pronto para entender os segredos da mata.",
+		"Se não queres avançar, que os ventos te levem para longe.",
+		"Os caminhos do medo não te levarão à sabedoria."
+	  ],
+		"weight": -1,
+		"image": "res://indigena_ancião.svg",
+		"items": ["Revolver portugues", "Pedra"],
+		"quantity": [1,2]
+		"id": 0
+	}
+  ]
+}

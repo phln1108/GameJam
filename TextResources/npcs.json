@@ -16,9 +16,33 @@
 		"Se não queres avançar, que os ventos te levem para longe.",
 		"Os caminhos do medo não te levarão à sabedoria."
 	  ],
-	  "weight": -1,
-	  "image": "res://indigena_ancião.svg",
-	  "items": ["gun", "ammo"]
+		"weight": -1,
+		"image": "res://Sprites/npcs/port1.png",
+		"items": ["Madeira", "Pedra"],
+		"quantity": [1,2],
+		"id": 0
+	},
+	{
+	  "start_dialogue": [
+		"Opa, que traz um homem branco para estas terras distantes?",
+		"O sol brilha forte hoje, estrangeiro. O que procuras?",
+		"Os espíritos da floresta sussurram sobre os vossos barcos."
+	  ],
+	  "yes": [
+		"Opa, Então estás em busca de novas terras? Muitos já tentaram.",
+		"Se assim é, os caminhos podem ser árduos, mas as recompensas são grandes.",
+		"Os deuses te guiarão se teu coração for verdadeiro."
+	  ],
+	  "no": [
+		"Opa, Talvez não estejas pronto para entender os segredos da mata.",
+		"Se não queres avançar, que os ventos te levem para longe.",
+		"Os caminhos do medo não te levarão à sabedoria."
+	  ],
+		"weight": -1,
+		"image": "res://Sprites/npcs/port1.png",
+		"items": ["Revolver portugues", "Pedra"],
+		"quantity": [1,2],
+		"id": 0
 	}
   ]
 }

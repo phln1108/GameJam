@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2f6fdtflh8vc"
-path="res://.godot/imported/poison.png-3c18f33425e66c26ac643ea489f186e8.ctex"
+uid="uid://c4q12gl27u455"
+path="res://.godot/imported/beach.png-c7724896937641574133e605de38fadc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/items/poison.png"
-dest_files=["res://.godot/imported/poison.png-3c18f33425e66c26ac643ea489f186e8.ctex"]
+source_file="res://Sprites/beach.png"
+dest_files=["res://.godot/imported/beach.png-c7724896937641574133e605de38fadc.ctex"]
 
 [params]
 

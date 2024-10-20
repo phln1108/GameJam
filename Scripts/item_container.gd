@@ -28,10 +28,11 @@ func _input(event):
 			var item_drag = draggable.instantiate()
 			item_drag.item = item
 			item_drag.is_dragging = true
+			
 			#algum bug ta fazendo com que o item spawne muito em baixo e pegue o offset errado
 			#acho que tem haver com o scale aplicado
 			item_drag.mouse_offset = get_global_mouse_position() - global_position - Vector2(20,0)
-			item_drag.global_position = global_position - Vector2(-30,430)
+			item_drag.global_position = global_position - Vector2(-20,0)
 			item_drag.returned.connect(on_item_returned)
 			parent.add_child(item_drag)
 			quantity-=1

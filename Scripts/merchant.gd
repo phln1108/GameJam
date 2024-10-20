@@ -9,7 +9,6 @@ func _ready() -> void:
 	for i in range(container.get_child_count()):
 		for j in range(container.get_child(i).get_child_count()):
 			selling_items.append(container.get_child(i).get_child(j))
-	
 		
 		
 	for item in ItemManager.items:
