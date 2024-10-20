@@ -1,4 +1,5 @@
 extends Control
+class_name ItemContainer
 
 signal item_removed
 
@@ -6,6 +7,8 @@ var draggable = preload("res://Scenes/draggable.tscn")
 @onready var sprite = $Sprite2D
 
 @export var item: Item
+@export var parent: Node = null
+
 @onready var quantity: int:
 	set(value):
 		quantity = value
@@ -15,15 +18,9 @@ var draggable = preload("res://Scenes/draggable.tscn")
 		else:
 			$Sprite2D.modulate = Color("#ffffff")
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Label.text = str(quantity)
 	sprite.texture = load(item.image)
-	# Access the ScrollContainer's theme
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -31,12 +28,14 @@ func _input(event):
 			var item_drag = draggable.instantiate()
 			item_drag.item = item
 			item_drag.is_dragging = true
-			item_drag.mouse_offset = get_global_mouse_position() - global_position
-			item_drag.global_position = global_position
+			#algum bug ta fazendo com que o item spawne muito em baixo e pegue o offset errado
+			#acho que tem haver com o scale aplicado
+			item_drag.mouse_offset = get_global_mouse_position() - global_position - Vector2(20,0)
+			item_drag.global_position = global_position - Vector2(-30,430)
 			item_drag.returned.connect(on_item_returned)
-			get_tree().root.add_child(item_drag)
+			parent.add_child(item_drag)
 			quantity-=1
 			accept_event()
-			
+
 func on_item_returned() -> void:
 	quantity+=1

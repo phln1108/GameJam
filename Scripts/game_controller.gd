@@ -1,26 +1,36 @@
 extends Node
 
 
-@onready var tent: TextureRect = $CanvasLayer/Tent
-@onready var notes: TextureRect = $CanvasLayer/Notes
-@onready var recipes: TextureRect = $CanvasLayer/Recipes
+@export  var tent: Control
+@export var crafting: Control
+@export var notes: Control
 
+func _ready() -> void:
+	change_visibility(tent,true)
+	change_visibility(notes,false)
+	change_visibility(crafting,false)
+
+func change_visibility(node: CanvasItem, visible: bool) -> void:
+	node.visible = visible
+	for n in node.get_children():
+		n.visible = visible
 
 func _on_back_from_notes() -> void:
-	tent.visible = true
-	notes.visible = false
+	print("aa")
+	change_visibility(tent,true)
+	change_visibility(notes,false)
 
+func _on_back_from_crafting() -> void:
+	print("aa")
+	change_visibility(tent,true)
+	change_visibility(crafting,false)
 
-func _on_back_from_recipes() -> void:
-	tent.visible = true
-	recipes.visible = false
-
-
-func _on_go_to_recipes() -> void:
-	tent.visible = false
-	recipes.visible = true
-
+func _on_go_to_crafting() -> void:
+	print("aa")
+	change_visibility(tent,false)
+	change_visibility(crafting,true)
 
 func _on_go_to_notes() -> void:
-	tent.visible = false
-	notes.visible = true
+	print("aa")
+	change_visibility(tent,false)
+	change_visibility(notes,true)

@@ -24,15 +24,15 @@ func _ready() -> void:
 	sprite = $Sprite2D
 	sprite.texture = load(item.image)
 
-func _physics_process(delta) -> void:
+func _physics_process(_delta) -> void:
 	if is_dragging:
 		global_position = global_position.lerp(get_global_mouse_position() - mouse_offset, drag_delay)
 		
 		var direction = global_position.x - previous_position.x
 		
-		if direction > 2:
+		if direction > 20:
 			rotation_degrees = lerp(rotation_degrees, rotation_amount, 0.3)
-		elif direction < -2:
+		elif direction < -20:
 			rotation_degrees = lerp(rotation_degrees, -rotation_amount, 0.3)
 		else:
 			rotation_degrees = lerp(rotation_degrees, 0.0, 0.3)

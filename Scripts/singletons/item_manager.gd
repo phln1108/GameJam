@@ -15,7 +15,6 @@ var discovered_items: Dictionary = {}
 #	quantity: int,
 #}
 var inventory: Dictionary = {}
-	
 
 func _ready() -> void:
 	items = ItemParser.get_json_data()
@@ -30,9 +29,9 @@ func _ready() -> void:
 func discover_item(discovered_item: Item) -> void:
 	if discovered_item.name in discovered_items.keys(): 
 		return
-		
+	
 	discovered_items[discovered_item.name] = discovered_item
-		
+	
 	inventory[discovered_item.name] = {
 		"item": discovered_item,
 		"quantity": 10
