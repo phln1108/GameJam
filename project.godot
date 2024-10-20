@@ -21,8 +21,8 @@ ItemManager="*res://Scripts/singletons/item_manager.gd"
 
 [display]
 
-window/size/viewport_width=106
-window/size/viewport_height=60
+window/size/viewport_width=1060
+window/size/viewport_height=600
 window/size/window_width_override=1152
 window/size/window_height_override=648
 window/stretch/mode="viewport"

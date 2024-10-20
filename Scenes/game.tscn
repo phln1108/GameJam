@@ -1,68 +1,155 @@
-[gd_scene load_steps=9 format=3 uid="uid://idlax0qtqn0y"]
+[gd_scene load_steps=8 format=3 uid="uid://idlax0qtqn0y"]
 
+[ext_resource type="Script" path="res://Scripts/game_controller.gd" id="1_c1g3l"]
 [ext_resource type="Texture2D" uid="uid://b8f3fvty1ssm5" path="res://Sprites/tent.png" id="1_yteoa"]
-[ext_resource type="Script" path="res://Scripts/singletons/item_manager.gd" id="2_1yebb"]
 [ext_resource type="Texture2D" uid="uid://bffm5gho7o27y" path="res://Sprites/UI/dialogueBox.png" id="2_v00wu"]
 [ext_resource type="FontFile" uid="uid://bxywmu6nfkka0" path="res://assets/fonts/Alkhemikal.ttf" id="3_cutih"]
 [ext_resource type="PackedScene" uid="uid://c2qibn7mpf133" path="res://Scenes/backpack.tscn" id="3_ohmnk"]
-[ext_resource type="FontFile" uid="uid://cfm37ph00b7w3" path="res://assets/fonts/Simple.ttf" id="4_o7chs"]
 [ext_resource type="PackedScene" uid="uid://cud7wtxkj3mrw" path="res://Scenes/Crafting.tscn" id="4_up1br"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tqmv8"]
-line_spacing = -2.58
-font = ExtResource("4_o7chs")
-font_size = 6
+line_spacing = -3.0
+font = ExtResource("3_cutih")
+font_color = Color(0.31802, 0.31802, 0.31802, 1)
 
-[node name="Game" type="Node"]
-
-[node name="Tent" type="Sprite2D" parent="."]
-position = Vector2(53, 30)
-texture = ExtResource("1_yteoa")
-
-[node name="DialogueBox" type="Control" parent="Tent"]
+[node name="Game" type="Control" node_paths=PackedStringArray("tent", "crafting", "notes")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -53.0
-offset_top = -30.0
-offset_right = -53.0
-offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c1g3l")
+tent = NodePath("Tent")
+crafting = NodePath("CraftingTable")
+notes = NodePath("Notes")
+
+[node name="TentRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yteoa")
+
+[node name="Tent" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextContainer" type="Sprite2D" parent="Tent/DialogueBox"]
-position = Vector2(53, 30)
+[node name="DialogueBox" type="Control" parent="Tent"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextContainer" type="TextureRect" parent="Tent/DialogueBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_v00wu")
 
-[node name="Label" type="Label" parent="Tent/DialogueBox/TextContainer"]
-anchors_preset = -1
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.047
-offset_left = -30.0
-offset_top = -87.0
-offset_right = -76.0
-offset_bottom = -64.82
+[node name="Label" type="Label" parent="Tent/DialogueBox"]
+custom_minimum_size = Vector2(120, 28)
+layout_mode = 0
+offset_left = 240.0
+offset_top = 50.0
+offset_right = 472.0
+offset_bottom = 98.0
+scale = Vector2(2.5, 2.5)
 theme_override_fonts/font = ExtResource("3_cutih")
 theme_override_font_sizes/font_size = 1
-text = "Ola viajante, tudo bom?"
+text = "Ola viajante, tudo bom? agpra eu verei se isso vai funcionar ou não opa meu ouvido não está funcionando"
 label_settings = SubResource("LabelSettings_tqmv8")
 autowrap_mode = 2
 
-[node name="ItemManager" type="Node" parent="."]
-script = ExtResource("2_1yebb")
+[node name="go_crafting" type="Button" parent="Tent"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 420.0
+offset_right = 230.0
+offset_bottom = 600.0
+flat = true
 
-[node name="CraftingTable" type="Sprite2D" parent="."]
-visible = false
+[node name="go_notes" type="Button" parent="Tent"]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 440.0
+offset_right = 1010.0
+offset_bottom = 600.0
+flat = true
 
-[node name="Backpack" parent="CraftingTable" instance=ExtResource("3_ohmnk")]
-anchors_preset = -1
-anchor_right = 106.0
-anchor_bottom = 60.0
+[node name="CraftingTable" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CraftingTable"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.788235)
 
 [node name="Crafting" parent="CraftingTable" instance=ExtResource("4_up1br")]
-position = Vector2(11, -9)
+layout_mode = 1
+mouse_filter = 1
 
-[node name="Notes" type="Sprite2D" parent="."]
+[node name="Backpack" parent="CraftingTable" instance=ExtResource("3_ohmnk")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+offset_top = -180.0
+mouse_filter = 1
+
+[node name="go_tent" type="Button" parent="CraftingTable"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(10, 10)
+mouse_filter = 1
+flat = true
+
+[node name="Notes" type="Control" parent="."]
 visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Notes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.788235)
+
+[node name="go_tent" type="Button" parent="Notes"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(10, 10)
+flat = true
+
+[connection signal="pressed" from="Tent/go_crafting" to="." method="_on_go_to_crafting"]
+[connection signal="pressed" from="Tent/go_notes" to="." method="_on_go_to_notes"]
+[connection signal="pressed" from="CraftingTable/go_tent" to="." method="_on_back_from_crafting"]
+[connection signal="pressed" from="Notes/go_tent" to="." method="_on_back_from_notes"]
