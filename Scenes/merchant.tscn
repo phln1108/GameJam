@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://cewlkep4hpqh7"]
+
+[ext_resource type="Script" path="res://merchant.gd" id="1_er3jq"]
+[ext_resource type="Texture2D" uid="uid://b7ndgvpl45kwy" path="res://Sprites/Items/wood.png" id="2_r4nmp"]
+[ext_resource type="Texture2D" uid="uid://b1jp6u235e8gq" path="res://Sprites/Items/stone.png" id="3_dwk8r"]
+[ext_resource type="Texture2D" uid="uid://dx4qwkxksprl7" path="res://Sprites/Items/iron.png" id="4_8u8l5"]
+[ext_resource type="Texture2D" uid="uid://vyxcwlwciupn" path="res://Sprites/Items/leather.png" id="5_xm5ys"]
+[ext_resource type="Texture2D" uid="uid://ek4aqx7jc251" path="res://Sprites/Items/string.png" id="6_ajo23"]
+[ext_resource type="Texture2D" uid="uid://db0kkjw62akl3" path="res://Sprites/Items/gunpowder.png" id="7_tdnst"]
+
+[node name="Merchant" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_er3jq")
+
+[node name="Container" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 13.0
+offset_right = 85.0
+offset_bottom = 49.0
+
+[node name="BoxContainer 1" type="BoxContainer" parent="Container"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 16.0
+alignment = 1
+
+[node name="Wood" type="TextureButton" parent="Container/BoxContainer 1"]
+layout_mode = 2
+texture_normal = ExtResource("2_r4nmp")
+
+[node name="Stone" type="TextureButton" parent="Container/BoxContainer 1"]
+layout_mode = 2
+texture_normal = ExtResource("3_dwk8r")
+
+[node name="Iron" type="TextureButton" parent="Container/BoxContainer 1"]
+layout_mode = 2
+texture_normal = ExtResource("4_8u8l5")
+
+[node name="BoxContainer 2" type="BoxContainer" parent="Container"]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 64.0
+offset_bottom = 35.0
+alignment = 1
+
+[node name="Leather" type="TextureButton" parent="Container/BoxContainer 2"]
+layout_mode = 2
+texture_normal = ExtResource("5_xm5ys")
+
+[node name="String" type="TextureButton" parent="Container/BoxContainer 2"]
+layout_mode = 2
+texture_normal = ExtResource("6_ajo23")
+
+[node name="Gunpowder" type="TextureButton" parent="Container/BoxContainer 2"]
+layout_mode = 2
+texture_normal = ExtResource("7_tdnst")

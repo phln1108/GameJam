@@ -1,21 +1,60 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2dyrrrsplajy"]
+[gd_scene load_steps=9 format=3 uid="uid://idlax0qtqn0y"]
 
 [ext_resource type="Texture2D" uid="uid://b8f3fvty1ssm5" path="res://Sprites/tent.png" id="1_yteoa"]
 [ext_resource type="Script" path="res://Scripts/singletons/item_manager.gd" id="2_1yebb"]
+[ext_resource type="Texture2D" uid="uid://bffm5gho7o27y" path="res://Sprites/UI/dialogueBox.png" id="2_v00wu"]
+[ext_resource type="FontFile" uid="uid://bxywmu6nfkka0" path="res://assets/fonts/Alkhemikal.ttf" id="3_cutih"]
 [ext_resource type="PackedScene" uid="uid://c2qibn7mpf133" path="res://Scenes/backpack.tscn" id="3_ohmnk"]
+[ext_resource type="FontFile" uid="uid://cfm37ph00b7w3" path="res://assets/fonts/Simple.ttf" id="4_o7chs"]
 [ext_resource type="PackedScene" uid="uid://cud7wtxkj3mrw" path="res://Scenes/Crafting.tscn" id="4_up1br"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tqmv8"]
+line_spacing = -2.58
+font = ExtResource("4_o7chs")
+font_size = 6
 
 [node name="Game" type="Node"]
 
 [node name="Tent" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(53, 30)
 texture = ExtResource("1_yteoa")
+
+[node name="DialogueBox" type="Control" parent="Tent"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -53.0
+offset_top = -30.0
+offset_right = -53.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextContainer" type="Sprite2D" parent="Tent/DialogueBox"]
+position = Vector2(53, 30)
+texture = ExtResource("2_v00wu")
+
+[node name="Label" type="Label" parent="Tent/DialogueBox/TextContainer"]
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.047
+offset_left = -30.0
+offset_top = -87.0
+offset_right = -76.0
+offset_bottom = -64.82
+theme_override_fonts/font = ExtResource("3_cutih")
+theme_override_font_sizes/font_size = 1
+text = "Ola viajante, tudo bom?"
+label_settings = SubResource("LabelSettings_tqmv8")
+autowrap_mode = 2
 
 [node name="ItemManager" type="Node" parent="."]
 script = ExtResource("2_1yebb")
 
 [node name="CraftingTable" type="Sprite2D" parent="."]
+visible = false
 
 [node name="Backpack" parent="CraftingTable" instance=ExtResource("3_ohmnk")]
 anchors_preset = -1
@@ -24,3 +63,6 @@ anchor_bottom = 60.0
 
 [node name="Crafting" parent="CraftingTable" instance=ExtResource("4_up1br")]
 position = Vector2(11, -9)
+
+[node name="Notes" type="Sprite2D" parent="."]
+visible = false
