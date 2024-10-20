@@ -5,42 +5,49 @@
 			"name": "Madeira",
 			"image": "res://Sprites/Items/wood.png",
 			"description": "Versátil e abundante, a madeira é a base de diversas ferramentas.",
+			"price": 12,
 		},
 		{
 			"id": 1,
 			"name": "Pedra",
 			"image": "res://Sprites/Items/stone.png",
 			"description": "Dura e resistente, a pedra é utilizada para criar armas e ferramentas primitivas.",
+			"price": 20
 		},
 		{
 			"id": 2,
 			"name": "Ferro",
 			"image": "res://Sprites/Items/iron.png",
 			"description": "Um metal forte e maleável, o ferro é vital para forjar ferramentas duradouras e armamentos poderosos. Sua extração exige habilidade e esforço.",
+			"price": 30
 		},
 		{
 			"id": 3,
 			"name": "Linha",
 			"image": "res://Sprites/Items/string.png",
 			"description": "Fina, mas resistente, a linha é usada para costurar couro e tecido. Com um pouco de criatividade, pode-se usar para criar armas.",
+			"price": 6
 		},
 		{
 			"id": 4,
 			"name": "Veneno",
 			"image": "res://Sprites/Items/poison.png",
 			"description": "Extraído de plantas e criaturas perigosas, o veneno pode ser utilizado tanto para eliminar inimigos de forma silenciosa quanto para enfraquecê-los em combate.",
+			"price": 0
 		},
 		{
 			"id": 5,
 			"name": "Couro",
 			"image": "res://Sprites/Items/leather.png",
 			"description": "Flexível e duradouro, o couro é obtido através da caça e usado na confecção de roupas, armaduras leves e acessórios resistentes.",
+			"price": 15
 		},
 		{
 			"id": 6,
 			"name": "Pólvora",
 			"image": "res://Sprites/Items/gunpowder.png",
-			"description": "Explosiva e imprevisível, a pólvora é uma mistura perigosa usada para criar armas de fogo e armadilhas. Manuseie com cuidado ou enfrente as consequências.	",
+			"description": "Explosiva e imprevisível, a pólvora é uma mistura perigosa usada para criar armas de fogo e armadilhas. Manuseie com cuidado ou enfrente as consequências.",
+			"price": 25
 		},
 		
 	],
