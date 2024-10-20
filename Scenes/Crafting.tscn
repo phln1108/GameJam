@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cud7wtxkj3mrw"]
+[gd_scene load_steps=5 format=3 uid="uid://cud7wtxkj3mrw"]
 
 [ext_resource type="Script" path="res://Scripts/crafting.gd" id="1_bvgvc"]
-[ext_resource type="Texture2D" uid="uid://b6rgr1h1ug8o7" path="res://icon.svg" id="1_dw7gj"]
+[ext_resource type="Texture2D" uid="uid://bfmk6l1ca1cc7" path="res://Sprites/UI/table.png" id="2_bnqii"]
+[ext_resource type="Texture2D" uid="uid://eq48mevujqg5" path="res://Sprites/UI/hammer.png" id="3_8oys2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvx8i"]
-size = Vector2(12, 12)
+size = Vector2(32, 32)
 
 [node name="Crafting" type="Control"]
 layout_mode = 3
@@ -15,26 +16,25 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(530, 200)
-scale = Vector2(20, 20)
+position = Vector2(445, 304)
+scale = Vector2(10, 10)
 script = ExtResource("1_bvgvc")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-modulate = Color(100, 100, 100, 1)
-scale = Vector2(0.09375, 0.09375)
-texture = ExtResource("1_dw7gj")
+texture = ExtResource("2_bnqii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_nvx8i")
 
 [node name="CraftButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 720.0
-offset_top = 120.0
-offset_right = 848.0
-offset_bottom = 248.0
-scale = Vector2(1.38, 1.38)
-texture_normal = ExtResource("1_dw7gj")
+offset_left = 688.0
+offset_top = 147.0
+offset_right = 720.0
+offset_bottom = 179.0
+scale = Vector2(10, 10)
+texture_normal = ExtResource("3_8oys2")
 
 [connection signal="visibility_changed" from="." to="Area2D" method="_on_crafting_visibility_changed"]
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]

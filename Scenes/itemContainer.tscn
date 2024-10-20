@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dfdbqqytvqlfn"]
 
 [ext_resource type="Script" path="res://Scripts/item_container.gd" id="1_iihvj"]
-[ext_resource type="Texture2D" uid="uid://b7ndgvpl45kwy" path="res://Sprites/items/wood.png" id="2_4iep8"]
+[ext_resource type="Texture2D" uid="uid://b7ndgvpl45kwy" path="res://Sprites/Items/wood.png" id="2_4iep8"]
 [ext_resource type="FontFile" uid="uid://cfm37ph00b7w3" path="res://assets/fonts/Simple.ttf" id="3_ss5yr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eut60"]
