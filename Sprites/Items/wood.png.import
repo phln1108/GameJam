@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvwstlaxw53qh"
-path="res://.godot/imported/TESTE_TAMANHO.png-d7425badac70ff9837638b733f4c02af.ctex"
+uid="uid://b7ndgvpl45kwy"
+path="res://.godot/imported/wood.png-f79136a7cc69d39b3e17fd4606529795.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/TESTE_TAMANHO.png"
-dest_files=["res://.godot/imported/TESTE_TAMANHO.png-d7425badac70ff9837638b733f4c02af.ctex"]
+source_file="res://Sprites/Items/wood.png"
+dest_files=["res://.godot/imported/wood.png-f79136a7cc69d39b3e17fd4606529795.ctex"]
 
 [params]
 
