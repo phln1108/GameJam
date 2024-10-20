@@ -1,146 +1,166 @@
 {
-	"collectables": [
-		{
-			"id": 0,
-			"name": "Madeira",
-			"image": "res://Sprites/Items/wood.png",
-			"description": "Versátil e abundante, a madeira é a base de diversas ferramentas.",
-			"price": 12,
-		},
-		{
-			"id": 1,
-			"name": "Pedra",
-			"image": "res://Sprites/Items/stone.png",
-			"description": "Dura e resistente, a pedra é utilizada para criar armas e ferramentas primitivas.",
-			"price": 20
-		},
-		{
-			"id": 2,
-			"name": "Ferro",
-			"image": "res://Sprites/Items/iron.png",
-			"description": "Um metal forte e maleável, o ferro é vital para forjar ferramentas duradouras e armamentos poderosos. Sua extração exige habilidade e esforço.",
-			"price": 30
-		},
-		{
-			"id": 3,
-			"name": "Linha",
-			"image": "res://Sprites/Items/string.png",
-			"description": "Fina, mas resistente, a linha é usada para costurar couro e tecido. Com um pouco de criatividade, pode-se usar para criar armas.",
-			"price": 6
-		},
-		{
-			"id": 4,
-			"name": "Veneno",
-			"image": "res://Sprites/Items/poison.png",
-			"description": "Extraído de plantas e criaturas perigosas, o veneno pode ser utilizado tanto para eliminar inimigos de forma silenciosa quanto para enfraquecê-los em combate.",
-			"price": 0
-		},
-		{
-			"id": 5,
-			"name": "Couro",
-			"image": "res://Sprites/Items/leather.png",
-			"description": "Flexível e duradouro, o couro é obtido através da caça e usado na confecção de roupas, armaduras leves e acessórios resistentes.",
-			"price": 15
-		},
-		{
-			"id": 6,
-			"name": "Pólvora",
-			"image": "res://Sprites/Items/gunpowder.png",
-			"description": "Explosiva e imprevisível, a pólvora é uma mistura perigosa usada para criar armas de fogo e armadilhas. Manuseie com cuidado ou enfrente as consequências.",
-			"price": 25
-		},
-		
-	],
-	"craftables": [
-		{
-			"id": 3,
-			"name": "Flecha",
-			"image": "res://Sprites/Items/arrow.png",
-			"description": " descrição sobre o item",
-			"craft_items": ["Pedra", "Madeira", "Linha"],
-			"craft_quantity": [1,1,2],
-			"output": 3,
-			"know": false,
-		},
-		{
-			"id": 9,
-			"name": "Revolver portugues",
-			"image": "res://Sprites/Items/gun.png",
-			"description": " descrição sobre o item",
-			"craft_items": ["Ferro","Pólvora","Madeira"],
-			"craft_quantity": [3,2,2],
-			"output": 1,
-			"know": false,
-		},
-		{
-			"id": 2,
-			"name": "Canoa",
-			"image": "res://canoa.svg",
-			"description": " descrição sobre o item",
-			"craft_items": ["Madeira"],
-			"craft_quantity": [5],
-			"output": 1,
-			"know": false,
-		},
-		{
-			"id": 4,
-			"name": "cocar",
-			"image": "res://cocar.svg",
-			"description": " descrição sobre o item",
-			"craft_items": [],
-			"craft_quantity": [],
-			"output": 1,
-			"know": false,
-		},
-		{
-			"id": 5,
-			"name": "escudo português",
-			"image": "res://escudo_portugues.svg",
-			"description": " descrição sobre o item",
-			"craft_items": [],
-			"craft_quantity": [],
-			"output": 1,
-			"know": false,
-		},
-		{
-			"id": 6,
-			"name": "espada portuguesa",
-			"image": "res://espada_portuguesa.svg",
-			"description": " descrição sobre o item",
-			"craft_items": [],
-			"craft_quantity": [],
-			"output": 1,
-			"know": false,
-		},
-		{
-			"id": 7,
-			"name": "cruz de madeira",
-			"image": "res://cruz_madeira.svg",
-			"description": " descrição sobre o item",
-			"craft_items": [],
-			"craft_quantity": [],
-			"output": 1,
-			"know": false,
-		},
-		{
-			"id": 10,
-			"name": "machete",
-			"image": "res://machete.svg",
-			"description": " descrição sobre o item",
-			"craft_items": [],
-			"craft_quantity": [],
-			"output": 1,
-			"know": false,
-		},
-		{
-			"id": 9,
-			"name": "rede de dormir",
-			"image": "res://rede_dormir.svg",
-			"description": " descrição sobre o item",
-			"craft_items": [],
-			"craft_quantity": [],
-			"output": 1,
-			"know": false,
-		},
-	]
+  "collectables": [
+	{
+	  "id": 0,
+	  "name": "Madeira",
+	  "image": "res://Sprites/Items/wood.png",
+	  "description": "Versátil e abundante, a madeira é a base de diversas ferramentas.",
+	  "price": 12
+	},
+	{
+	  "id": 1,
+	  "name": "Pedra",
+	  "image": "res://Sprites/Items/stone.png",
+	  "description": "Dura e resistente, a pedra é utilizada para criar armas e ferramentas primitivas.",
+	  "price": 20
+	},
+	{
+	  "id": 2,
+	  "name": "Ferro",
+	  "image": "res://Sprites/Items/iron.png",
+	  "description": "Um metal forte e maleável, o ferro é vital para forjar ferramentas duradouras e armamentos poderosos. Sua extração exige habilidade e esforço.",
+	  "price": 30
+	},
+	{
+	  "id": 3,
+	  "name": "Linha",
+	  "image": "res://Sprites/Items/string.png",
+	  "description": "Fina, mas resistente, a linha é usada para costurar couro e tecido. Com um pouco de criatividade, pode-se usar para criar armas.",
+	  "price": 6
+	},
+	{
+	  "id": 4,
+	  "name": "Veneno",
+	  "image": "res://Sprites/Items/poison.png",
+	  "description": "Extraído de plantas e criaturas perigosas, o veneno pode ser utilizado para fortalecer armas ou sabotar o inimigo.",
+	  "price": 0
+	},
+	{
+	  "id": 5,
+	  "name": "Couro",
+	  "image": "res://Sprites/Items/leather.png",
+	  "description": "Flexível e duradouro, o couro é obtido através da caça e usado na confecção de roupas, armaduras leves e acessórios resistentes.",
+	  "price": 15
+	},
+	{
+	  "id": 6,
+	  "name": "Pólvora",
+	  "image": "res://Sprites/Items/gunpowder.png",
+	  "description": "Explosiva e imprevisível, a pólvora é uma mistura perigosa usada para criar armas de fogo e armadilhas. Manuseie com cuidado ou enfrente as consequências.",
+	  "price": 25
+	},
+	{
+	  "id": 7,
+	  "name": "Pena",
+	  "image": "res://Sprites/Items/feather.png",
+	  "description": "Essencial para estabilizar o voo de uma flecha",
+	  "price": 25
+	},
+	{
+	  "id": 8,
+	  "name": "Pau-Brasil",
+	  "image": "res://Sprites/Items/pau-brasil.png",
+	  "description": "Árvore nobre e valiosa, o pau-brasil é conhecido por sua madeira avermelhada e sua capacidade de produzir uma tinta vibrante.",
+	  "price": 25
+	},
+	{
+	  "id": 9,
+	  "name": "Erva Medicinal",
+	  "image": "res://Sprites/Items/healing_herb.png",
+	  "description": "Encontrada nas florestas e clareiras, essa planta possui propriedades curativas",
+	  "price": 25
+	}
+  ],
+  "craftables": [
+	{
+	  "id": 10,
+	  "name": "Flecha",
+	  "image": "res://Sprites/Items/arrow.png",
+	  "description": "Lançada com força e habilidade, ela pode alcançar alvos distantes, sendo indispensável para caçadores e guerreiros experientes.",
+	  "craft_items": ["Pedra", "Madeira", "Pena"],
+	  "craft_quantity": [1, 1, 1],
+	  "output": 3,
+	  "know": false
+	},
+	{
+	  "id": 11,
+	  "name": "Arcabuz",
+	  "image": "res://Sprites/Items/gun.png",
+	  "description": "Uma arma de fogo revolucionária, utilizada tanto em batalhas quanto em caçadas.",
+	  "craft_items": ["Ferro", "Pólvora", "Madeira"],
+	  "craft_quantity": [3, 2, 2],
+	  "output": 1,
+	  "know": false
+	},
+	{
+	  "id": 12,
+	  "name": "Munição",
+	  "image": "res://Sprites/Items/ammo.png",
+	  "description": "Pequenas esferas de ferro, cuidadosamente moldadas para se ajustarem ao cano do arcabuz.",
+	  "craft_items": ["Ferro", "Pólvora", "Couro"],
+	  "craft_quantity": [2, 3, 1],
+	  "output": 2,
+	  "know": false
+	},
+	{
+	  "id": 13,
+	  "name": "Arco",
+	  "image": "res://Sprites/Items/bow.png",
+	  "description": "Uma arma antiga, mas ainda temida por sua precisão e silêncio.",
+	  "craft_items": ["Madeira", "Linha"],
+	  "craft_quantity": [2, 3],
+	  "output": 1,
+	  "know": false
+	},
+	{
+	  "id": 14,
+	  "name": "Flecha Envenenada",
+	  "image": "res://Sprites/Items/poison_arrow.png",
+	  "description": "Uma arma silenciosa e mortal, a flecha envenenada combina a precisão do arco com a letalidade do veneno.",
+	  "craft_items": ["Flecha", "Veneno"],
+	  "craft_quantity": [5, 1],
+	  "output": 5,
+	  "know": false
+	},
+	{
+	  "id": 15,
+	  "name": "Tinta",
+	  "image": "res://Sprites/Items/dye.png",
+	  "description": "Extraída do valioso tronco do pau-brasil, essa tinta possui um tom avermelhado intenso.",
+	  "craft_items": ["Pau-Brasil", "Pedra"],
+	  "craft_quantity": [2, 1],
+	  "output": 1,
+	  "know": false
+	},
+	{
+	  "id": 16,
+	  "name": "Tinta Envenenada",
+	  "image": "res://Sprites/Items/poison_dye.png",
+	  "description": "Parecendo inofensiva, essa tinta esconde um veneno letal. É uma armadilha sutil que envenena quem a manuseia, enganando inimigos sem levantar suspeitas.",
+	  "craft_items": ["Tinta", "Veneno"],
+	  "craft_quantity": [1, 1],
+	  "output": 1,
+	  "know": false
+	},
+	{
+	  "id": 17,
+	  "name": "Munição Envenenada",
+	  "image": "res://Sprites/Items/poison_ammo.png",
+	  "description": "Essa munição adulterada causa danos a quem usa, mas fica claro que alguém a sabotou.",
+	  "craft_items": ["Munição", "Veneno"],
+	  "craft_quantity": [1, 1],
+	  "output": 1,
+	  "know": false
+	},
+	{
+	  "id": 18,
+	  "name": "Bálsamo Curativo",
+	  "image": "res://Sprites/Items/herbal_elixir.png",
+	  "description": "Um unguento feito com ervas medicinais, capaz de restaurar a vitalidade e curar feridas.",
+	  "craft_items": ["Munição", "Veneno"],
+	  "craft_quantity": [1, 1],
+	  "output": 1,
+	  "know": false
+	}
+  ]
 }
