@@ -3,49 +3,36 @@
 [ext_resource type="Script" path="res://Scripts/backpack.gd" id="1_ajw67"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ri6pi"]
-size = Vector2(106, 18)
+size = Vector2(1060, 180)
 
 [sub_resource type="Theme" id="Theme_gceo6"]
 
 [node name="Backpack" type="Control"]
-custom_minimum_size = Vector2(0, 18)
 layout_mode = 3
-anchor_top = 0.7
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -3.05176e-05
-grow_horizontal = 2
-grow_vertical = 0
+anchors_preset = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_ajw67")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(0, 420)
-scale = Vector2(10, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(53, -33)
+position = Vector2(530, 510)
 shape = SubResource("RectangleShape2D_ri6pi")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -180.0
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 0
+offset_top = 420.0
+offset_right = 1060.0
+offset_bottom = 600.0
 color = Color(0.137255, 0.607843, 0.564706, 0.717647)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+custom_minimum_size = Vector2(1060, 180)
+layout_mode = 0
+offset_top = 420.0
+offset_right = 1060.0
+offset_bottom = 600.0
 theme = SubResource("Theme_gceo6")
 vertical_scroll_mode = 0
 

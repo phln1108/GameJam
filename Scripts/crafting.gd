@@ -46,7 +46,7 @@ func _on_area_entered(area: Area2D) -> void:
 		else:
 			on_bench[entered.item.name] = 1
 		
-		print(entered.item.name)
+		#print(entered.item.name)
 
 func _on_area_exited(area: Area2D) -> void:
 	var exited = area.get_parent()
@@ -54,7 +54,7 @@ func _on_area_exited(area: Area2D) -> void:
 		on_bench[exited.item.name] -= 1
 		if on_bench[exited.item.name] == 0:
 			on_bench.erase(exited.item.name)
-		print(exited.item.name)
+		#print(exited.item.name)
 
 
 func _on_crafting_visibility_changed() -> void:

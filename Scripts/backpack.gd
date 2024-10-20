@@ -42,7 +42,7 @@ func _input(event) -> void:
 				is_dragging = true
 				ancor = get_global_mouse_position()
 				last_scroll_value = $ScrollContainer.scroll_horizontal
-				accept_event()
+				#accept_event()
 		else:
 			is_dragging = false
 			

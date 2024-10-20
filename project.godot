@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 
 SignalBus="*res://Scripts/singletons/signal_bus.gd"
 ItemManager="*res://Scripts/singletons/item_manager.gd"
+HistoryController="*res://Scripts/singletons/history_controller.gd"
 
 [display]
 
