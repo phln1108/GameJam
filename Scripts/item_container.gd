@@ -40,3 +40,4 @@ func _input(event):
 
 func on_item_returned() -> void:
 	quantity+=1
+	

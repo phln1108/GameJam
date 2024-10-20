@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfdbqqytvqlfn"]
+[gd_scene load_steps=6 format=3 uid="uid://dfdbqqytvqlfn"]
 
 [ext_resource type="Script" path="res://Scripts/item_container.gd" id="1_iihvj"]
-[ext_resource type="Texture2D" uid="uid://b7ndgvpl45kwy" path="res://Sprites/items/wood.png" id="2_4iep8"]
+[ext_resource type="Texture2D" uid="uid://b7ndgvpl45kwy" path="res://Sprites/Items/wood.png" id="2_4iep8"]
 [ext_resource type="FontFile" uid="uid://cfm37ph00b7w3" path="res://assets/fonts/Simple.ttf" id="3_ss5yr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sc1ul"]
+size = Vector2(14.4, 14.4)
 
 [sub_resource type="LabelSettings" id="LabelSettings_eut60"]
 font = ExtResource("3_ss5yr")
@@ -29,6 +32,13 @@ position = Vector2(100, 80)
 scale = Vector2(10, 10)
 texture = ExtResource("2_4iep8")
 
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(0.600002, 0.4)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_sc1ul")
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -41,3 +51,6 @@ offset_bottom = -72.0
 scale = Vector2(10, 10)
 text = "100"
 label_settings = SubResource("LabelSettings_eut60")
+
+[connection signal="mouse_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_exited"]
