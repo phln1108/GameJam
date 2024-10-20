@@ -20,7 +20,7 @@ script = ExtResource("2_1yebb")
 [node name="Backpack" parent="CraftingTable" instance=ExtResource("3_ohmnk")]
 anchors_preset = -1
 anchor_right = 106.0
-anchor_bottom = 62.0
+anchor_bottom = 60.0
 
 [node name="Crafting" parent="CraftingTable" instance=ExtResource("4_up1br")]
 position = Vector2(11, -9)

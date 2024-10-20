@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bxywmu6nfkka0"
-path="res://.godot/imported/Alkhemikal.ttf-489c9cbb03d9a1f0897a9b00b3e6208a.fontdata"
+path="res://.godot/imported/Alkhemikal.ttf-4312d8a0c72dd9a4cb748882155f123c.fontdata"
 
 [deps]
 
-source_file="res://assets/Alkhemikal.ttf"
-dest_files=["res://.godot/imported/Alkhemikal.ttf-489c9cbb03d9a1f0897a9b00b3e6208a.fontdata"]
+source_file="res://assets/fonts/Alkhemikal.ttf"
+dest_files=["res://.godot/imported/Alkhemikal.ttf-4312d8a0c72dd9a4cb748882155f123c.fontdata"]
 
 [params]
 
