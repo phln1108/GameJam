@@ -29,6 +29,7 @@ static func get_json_data() -> Array[Item]:
 		item.description = parsed_item["description"]
 		item.craft_items = parsed_item["craft_items"]
 		item.craft_quantity = parsed_item["craft_quantity"]
+		item.output = parsed_item["output"]
 		item.know = parsed_item["know"]
 		items.append(item)
 	

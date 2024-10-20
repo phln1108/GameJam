@@ -2,21 +2,23 @@
 
 [ext_resource type="Script" path="res://Scripts/item_container.gd" id="1_iihvj"]
 [ext_resource type="Texture2D" uid="uid://birf0vogeo8v7" path="res://Sprites/sprites1.png" id="2_dt8bs"]
-[ext_resource type="FontFile" uid="uid://bxywmu6nfkka0" path="res://assets/Alkhemikal.ttf" id="3_ds5xc"]
+[ext_resource type="FontFile" uid="uid://cfm37ph00b7w3" path="res://assets/fonts/Simple.ttf" id="3_ss5yr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eut60"]
-font = ExtResource("3_ds5xc")
+font = ExtResource("3_ss5yr")
+font_size = 8
 
 [node name="ItemContainer" type="Control"]
-custom_minimum_size = Vector2(32, 24)
+custom_minimum_size = Vector2(20, 16)
 layout_mode = 3
-anchor_right = 0.226
-anchor_bottom = 0.4
-offset_right = 0.0439987
+anchor_right = 0.189
+anchor_bottom = 0.267
+offset_right = -0.0340004
+offset_bottom = -0.0200005
 script = ExtResource("1_iihvj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(12, 8)
+position = Vector2(10, 8)
 texture = ExtResource("2_dt8bs")
 
 [node name="Label" type="Label" parent="."]
@@ -25,9 +27,9 @@ anchors_preset = -1
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.047
-offset_left = 11.0
-offset_top = -16.0
-offset_right = 8.0
-offset_bottom = -1.128
+offset_left = 9.0
+offset_top = -6.0
+offset_right = -1.0
+offset_bottom = 1.248
 text = "100"
 label_settings = SubResource("LabelSettings_eut60")

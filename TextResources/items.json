@@ -46,21 +46,33 @@
 	],
 	"craftables": [
 		{
-			"id": 2,
-			"name": "canoa",
-			"image": "res://canoa.svg",
+			"id": 3,
+			"name": "Flecha",
+			"image": "res://Sprites/Items/arrow.png",
 			"description": " descrição sobre o item",
-			"craft_items": [],
-			"craft_quantity": [],
+			"craft_items": ["Pedra", "Madeira", "Linha"],
+			"craft_quantity": [1,1,2],
+			"output": 3,
 			"know": false,
 		},
 		{
-			"id": 3,
-			"name": "arco e flecha",
-			"image": "res://arco_flecha.svg",
+			"id": 9,
+			"name": "Revolver portugues",
+			"image": "res://Sprites/Items/gun.png",
 			"description": " descrição sobre o item",
-			"craft_items": [],
-			"craft_quantity": [],
+			"craft_items": ["Ferro","Pólvora","Madeira"],
+			"craft_quantity": [3,2,2],
+			"output": 1,
+			"know": false,
+		},
+		{
+			"id": 2,
+			"name": "Canoa",
+			"image": "res://canoa.svg",
+			"description": " descrição sobre o item",
+			"craft_items": ["Madeira"],
+			"craft_quantity": [5],
+			"output": 1,
 			"know": false,
 		},
 		{
@@ -70,6 +82,7 @@
 			"description": " descrição sobre o item",
 			"craft_items": [],
 			"craft_quantity": [],
+			"output": 1,
 			"know": false,
 		},
 		{
@@ -79,6 +92,7 @@
 			"description": " descrição sobre o item",
 			"craft_items": [],
 			"craft_quantity": [],
+			"output": 1,
 			"know": false,
 		},
 		{
@@ -88,6 +102,7 @@
 			"description": " descrição sobre o item",
 			"craft_items": [],
 			"craft_quantity": [],
+			"output": 1,
 			"know": false,
 		},
 		{
@@ -97,6 +112,7 @@
 			"description": " descrição sobre o item",
 			"craft_items": [],
 			"craft_quantity": [],
+			"output": 1,
 			"know": false,
 		},
 		{
@@ -106,6 +122,7 @@
 			"description": " descrição sobre o item",
 			"craft_items": [],
 			"craft_quantity": [],
+			"output": 1,
 			"know": false,
 		},
 		{
@@ -115,6 +132,7 @@
 			"description": " descrição sobre o item",
 			"craft_items": [],
 			"craft_quantity": [],
+			"output": 1,
 			"know": false,
 		},
 	]

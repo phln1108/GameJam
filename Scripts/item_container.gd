@@ -15,8 +15,6 @@ var draggable = preload("res://Scenes/draggable.tscn")
 		else:
 			$Sprite2D.modulate = Color("#ffffff")
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Label.text = str(quantity)
@@ -35,7 +33,10 @@ func _input(event):
 			item_drag.is_dragging = true
 			item_drag.mouse_offset = get_global_mouse_position() - global_position
 			item_drag.global_position = global_position
+			item_drag.returned.connect(on_item_returned)
 			get_tree().root.add_child(item_drag)
 			quantity-=1
+			accept_event()
 			
-			
+func on_item_returned() -> void:
+	quantity+=1
