@@ -22,7 +22,7 @@ static func get_json_data() -> Array[Item]:
 		items.append(item)
 	
 	for parsed_item in parsed_results["craftables"]:
-		var item := Craftables.new()
+		var item := Craftable.new()
 		item.id = parsed_item["id"]
 		item.name = parsed_item["name"]
 		item.image = parsed_item["image"]

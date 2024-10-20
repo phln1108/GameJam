@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be36d1o617up6"
-path="res://.godot/imported/tenda.png-8f0f93e7a3af7dd9f68a91019876012b.ctex"
+uid="uid://b8f3fvty1ssm5"
+path="res://.godot/imported/tent.png-b5373336051bae6e07a3171de6b92e68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/tenda.png"
-dest_files=["res://.godot/imported/tenda.png-8f0f93e7a3af7dd9f68a91019876012b.ctex"]
+source_file="res://Sprites/tent.png"
+dest_files=["res://.godot/imported/tent.png-b5373336051bae6e07a3171de6b92e68.ctex"]
 
 [params]
 

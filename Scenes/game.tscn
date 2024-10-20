@@ -1,35 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdpkl7bhedquv"]
+[gd_scene load_steps=5 format=3 uid="uid://c2dyrrrsplajy"]
 
-[ext_resource type="Script" path="res://Scripts/game_controller.gd" id="1_ow5n3"]
-[ext_resource type="Texture2D" uid="uid://be36d1o617up6" path="res://Sprites/tenda.png" id="1_xbmcg"]
-[ext_resource type="PackedScene" uid="uid://syip5gjrcc0e" path="res://Scenes/dialogueBox.tscn" id="2_wcern"]
-[ext_resource type="Texture2D" uid="uid://b6rgr1h1ug8o7" path="res://icon.svg" id="3_ycund"]
+[ext_resource type="Texture2D" uid="uid://b8f3fvty1ssm5" path="res://Sprites/tent.png" id="1_yteoa"]
+[ext_resource type="Script" path="res://Scripts/singletons/item_manager.gd" id="2_1yebb"]
+[ext_resource type="PackedScene" uid="uid://c2qibn7mpf133" path="res://Scenes/backpack.tscn" id="3_ohmnk"]
+[ext_resource type="PackedScene" uid="uid://cud7wtxkj3mrw" path="res://Scenes/Crafting.tscn" id="4_up1br"]
 
 [node name="Game" type="Node"]
-script = ExtResource("1_ow5n3")
 
 [node name="Tent" type="Sprite2D" parent="."]
-position = Vector2(606.125, 324.581)
-scale = Vector2(0.115345, 0.115345)
-texture = ExtResource("1_xbmcg")
+visible = false
+position = Vector2(53, 30)
+texture = ExtResource("1_yteoa")
 
-[node name="TextureButton" type="TextureButton" parent="Tent"]
-offset_left = -1943.09
-offset_top = 1633.52
-offset_right = -1815.09
-offset_bottom = 1761.52
-scale = Vector2(7.52475, 7.63981)
-texture_normal = ExtResource("3_ycund")
+[node name="ItemManager" type="Node" parent="."]
+script = ExtResource("2_1yebb")
 
-[node name="DialogueBox" parent="Tent" instance=ExtResource("2_wcern")]
+[node name="CraftingTable" type="Sprite2D" parent="."]
+
+[node name="Backpack" parent="CraftingTable" instance=ExtResource("3_ohmnk")]
 anchors_preset = -1
-anchor_left = 0.784
-anchor_right = 0.784
-offset_left = -4694.4
-offset_top = -2762.0
-offset_right = -2145.4
-offset_bottom = -1869.0
-theme_override_font_sizes/font_size = 251
-text = "ceeeded"
-autowrap_mode = 2
-dialogues = Array[String](["efvev", "efvfdv", "fevefqwwdfwv", "cueeprola"])
+anchor_right = 106.0
+anchor_bottom = 62.0
+
+[node name="Crafting" parent="CraftingTable" instance=ExtResource("4_up1br")]
+position = Vector2(11, -9)
