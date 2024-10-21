@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cud7wtxkj3mrw"]
+[gd_scene load_steps=10 format=3 uid="uid://cud7wtxkj3mrw"]
 
 [ext_resource type="Script" path="res://Scripts/crafting.gd" id="1_bvgvc"]
 [ext_resource type="Texture2D" uid="uid://bfmk6l1ca1cc7" path="res://Sprites/UI/table.png" id="2_bnqii"]
 [ext_resource type="Texture2D" uid="uid://eq48mevujqg5" path="res://Sprites/UI/hammer.png" id="3_8oys2"]
 [ext_resource type="FontFile" uid="uid://bxywmu6nfkka0" path="res://assets/fonts/Alkhemikal.ttf" id="4_62nc2"]
+[ext_resource type="Script" path="res://Scripts/deposit.gd" id="5_b8xqm"]
 [ext_resource type="Texture2D" uid="uid://cee4c285ayns2" path="res://Sprites/UI/item_box.png" id="5_u5xwx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvx8i"]
@@ -24,15 +25,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Crafter" type="Area2D" parent="."]
 position = Vector2(530, 230)
 scale = Vector2(10, 10)
 script = ExtResource("1_bvgvc")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Crafter"]
 texture = ExtResource("2_bnqii")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crafter"]
 shape = SubResource("RectangleShape2D_nvx8i")
 
 [node name="CraftButton" type="TextureButton" parent="."]
@@ -57,19 +58,22 @@ grow_horizontal = 2
 label_settings = SubResource("LabelSettings_sy10w")
 horizontal_alignment = 1
 
-[node name="Area2D2" type="Area2D" parent="."]
+[node name="Deposit" type="Area2D" parent="."]
 position = Vector2(110, 230)
+script = ExtResource("5_b8xqm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
+[node name="Sprite2D" type="Sprite2D" parent="Deposit"]
 position = Vector2(50, 60)
 scale = Vector2(10, 10)
 texture = ExtResource("5_u5xwx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deposit"]
 position = Vector2(45, 60)
 shape = SubResource("RectangleShape2D_bxuhf")
 
-[connection signal="visibility_changed" from="." to="Area2D" method="_on_crafting_visibility_changed"]
-[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
-[connection signal="pressed" from="CraftButton" to="Area2D" method="_on_craft_button_pressed"]
+[connection signal="visibility_changed" from="." to="Crafter" method="_on_crafting_visibility_changed"]
+[connection signal="area_entered" from="Crafter" to="Crafter" method="_on_area_entered"]
+[connection signal="area_exited" from="Crafter" to="Crafter" method="_on_area_exited"]
+[connection signal="pressed" from="CraftButton" to="Crafter" method="_on_craft_button_pressed"]
+[connection signal="area_entered" from="Deposit" to="Deposit" method="_on_area_entered"]
+[connection signal="area_exited" from="Deposit" to="Deposit" method="_on_area_exited"]

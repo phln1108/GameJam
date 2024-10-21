@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duo4hcmyp338n"
-path="res://.godot/imported/pau-brasil.png-9f6002fd61077c6a9fac6fcc309bd07d.ctex"
+path="res://.godot/imported/pau-brasil.png-519dc5d2ff5be4011401b36692599faa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Items/pau-brasil.png"
-dest_files=["res://.godot/imported/pau-brasil.png-9f6002fd61077c6a9fac6fcc309bd07d.ctex"]
+source_file="res://Sprites/items/pau-brasil.png"
+dest_files=["res://.godot/imported/pau-brasil.png-519dc5d2ff5be4011401b36692599faa.ctex"]
 
 [params]
 

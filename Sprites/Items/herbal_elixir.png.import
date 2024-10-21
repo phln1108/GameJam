@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyih2q2j8p0d5"
-path="res://.godot/imported/herbal_elixir.png-595e894ab81a57fc166af879334c4231.ctex"
+path="res://.godot/imported/herbal_elixir.png-02c8c34680f4a93a6b991c18a477a2d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Items/herbal_elixir.png"
-dest_files=["res://.godot/imported/herbal_elixir.png-595e894ab81a57fc166af879334c4231.ctex"]
+source_file="res://Sprites/items/herbal_elixir.png"
+dest_files=["res://.godot/imported/herbal_elixir.png-02c8c34680f4a93a6b991c18a477a2d3.ctex"]
 
 [params]
 

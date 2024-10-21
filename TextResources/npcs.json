@@ -2,47 +2,356 @@
   "npcs": [
 	{
 	  "start_dialogue": [
-		"O que traz um homem branco para estas terras distantes?",
-		"O sol brilha forte hoje, estrangeiro. O que procuras?",
-		"Os espíritos da floresta sussurram sobre os vossos barcos."
+		"Precisamos de um arco para defender nossa terra.",
+		"Consegue fazer um arco forte o suficiente para nossos caçadores?",
+		"Trago veneno para fazer escambo."
 	  ],
 	  "yes": [
-		"Então estás em busca de novas terras? Muitos já tentaram.",
-		"Se assim é, os caminhos podem ser árduos, mas as recompensas são grandes.",
-		"Os deuses te guiarão se teu coração for verdadeiro."
+		"Você nos entregou algo valioso. Sua habilidade será contada em nossas histórias.",
+		"A nossa resistência depende disso. Obrigado.."
 	  ],
 	  "no": [
-		"Talvez não estejas pronto para entender os segredos da mata.",
-		"Se não queres avançar, que os ventos te levem para longe.",
-		"Os caminhos do medo não te levarão à sabedoria."
+		"Sem seu arco, nossa luta será mais difícil. Lembre-se disso.",
+		"Sua recusa enfraquece nossa resistência. Que essa decisão pese em seu coração."
 	  ],
-		"weight": -1,
-		"image": "res://Sprites/npcs/port1.png",
-		"items": ["Madeira", "Pedra"],
-		"quantity": [1,2],
-		"id": 0
+	  "weight": 1,
+	  "image": "res://sprites/npcs/indio1.png",
+	  "items": ["Arco"],
+	  "quantity": [1],
+	  "brought_items": ["Veneno"],
+	  "brought_items_quantity": [2],
+	  "id": 1
 	},
 	{
 	  "start_dialogue": [
-		"Opa, que traz um homem branco para estas terras distantes?",
-		"O sol brilha forte hoje, estrangeiro. O que procuras?",
-		"Os espíritos da floresta sussurram sobre os vossos barcos."
+		"Nossa terra pode ser invadida a qualquer momento.",
+		"Nossos batedores identificaram os barcos da coroa portuguesa atracando no litoral.",
+		"Precisamos de flechas para nos defender. Eles podem atacar a qualquer momento.",
+		"Trago comigo alguns recursos que roubamos de seus navios, não possuem valor para nós."
+	  ],
+	  "yes": ["Gratidão profunda. Seu apoio nos traz força e esperança."],
+	  "no": [
+		"Cairemos em desvantagem. Um dia, você entenderá o que isso significa.",
+		"Nossos guerreiros vão para a batalha sem flechas, e você carrega parte dessa culpa."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/indio2.png",
+	  "items": ["Flecha"],
+	  "quantity": [10],
+	  "brought_items": ["Ferro", "Pólvora", "Arcabuz", "Munição"],
+	  "brought_items_quantity": [3, 5, 1, 5],
+	  "id": 2
+	},
+	{
+	  "start_dialogue": [
+		"Você... artesão, é conhecido por suas mãos habilidosas.",
+		"Trouxe comigo um veneno de minha tribo... preciso que você faça flechas envenenadas."
 	  ],
 	  "yes": [
-		"Opa, Então estás em busca de novas terras? Muitos já tentaram.",
-		"Se assim é, os caminhos podem ser árduos, mas as recompensas são grandes.",
-		"Os deuses te guiarão se teu coração for verdadeiro."
+		"Eu sabia que poderia contar com você, artesão.",
+		"Este veneno é forte, cuidado ao manuseá-lo.",
+		"Com essas flechas prontas, meu povo estará protegido.",
+		"Que os espíritos te guiem. Sua ajuda será lembrada."
 	  ],
 	  "no": [
-		"Opa, Talvez não estejas pronto para entender os segredos da mata.",
-		"Se não queres avançar, que os ventos te levem para longe.",
-		"Os caminhos do medo não te levarão à sabedoria."
+		"Entendo... talvez eu tenha pedido demais.",
+		"Nem todos estão prontos para lidar com o poder do veneno.",
+		"Mas lembre-se, artesão, não esquecerei sua recusa.",
+		"Sua decisão pode ter consequências. Que o futuro não te cobre isso."
 	  ],
-		"weight": -1,
-		"image": "res://Sprites/npcs/port1.png",
-		"items": ["Revolver portugues", "Pedra"],
-		"quantity": [1,2],
-		"id": 0
+	  "weight": 1,
+	  "image": "res://sprites/npcs/indio1.png",
+	  "items": ["Flecha Envenenada"],
+	  "brought_items": ["Veneno", "Madeira", "Pena"],
+	  "brought_items_quantity": [1, 5, 1, 10],
+	  "quantity": [5],
+	  "id": 3
+	},
+	{
+	  "start_dialogue": [
+		"Saudações, artesão. Eu trago algo valioso.",
+		"Este é o pau-brasil, sua madeira contém um poder especial.",
+		"Preciso que você faça tinta, algo que dure e conte nossa história."
+	  ],
+	  "yes": [
+		"Você entende o valor dessa madeira e o que ela representa.",
+		"Com essa tinta, poderemos marcar nossa cultura para sempre.",
+		"Seu trabalho será lembrado, assim como as histórias que ele preserva.",
+		"A natureza te sorri, artesão. Agradeço profundamente por isso."
+	  ],
+	  "no": [
+		"Você recusa um pedido importante para nosso povo.",
+		"A tinta que pedi poderia registrar nossa história.",
+		"Não esquecerei que você virou as costas para algo tão valioso.",
+		"Que o tempo não apague o que você negou fazer hoje."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/indio2.png",
+	  "items": ["Tinta"],
+	  "quantity": [1],
+	  "brought_items": ["Pau-Brasil", "Pedra"],
+	  "brought_items_quantity": [2, 3],
+	  "id": 4
+	},
+	{
+	  "start_dialogue": [
+		"Artesão, estou ferido e preciso de sua ajuda.",
+		"Eu trouxe ervas medicinais da floresta. Com elas, você pode fazer um bálsamo curativo.",
+		"Além disso, meu arco está danificado. Preciso de materiais para consertá-lo."
+	  ],
+	  "yes": [
+		"Agradeço por sua bondade, artesão.",
+		"Com esse bálsamo, minhas feridas logo cicatrizarão.",
+		"Os materiais que me deu permitirão que meu arco volte a ser forte.",
+		"Que os espíritos da floresta te protejam por ajudar um guerreiro em necessidade."
+	  ],
+	  "no": [
+		"Você nega a um ferido a cura que ele tanto precisa.",
+		"Sem o bálsamo e o arco, ficarei vulnerável em minhas lutas.",
+		"Sua recusa será lembrada, artesão. A floresta não esquece quem não ajuda seus guerreiros.",
+		"Que você nunca precise da ajuda que hoje negou."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/indio1.png",
+	  "items": ["Bálsamo Curativo", "Madeira", "Linha"],
+	  "quantity": [1, 2, 3],
+	  "brought_items": ["Erva Medicinal"],
+	  "brought_items_quantity": [4],
+	  "id": 5
+	},
+	{
+	  "start_dialogue": [
+		"Artesão, ouvi falar das armas que os portugueses trazem.",
+		"Eles chamam de arcabuz. É algo poderoso, diferente do que conhecemos.",
+		"Preciso que você me ajude a conseguir um arcabuz e munição. Isso pode mudar o equilíbrio em nossas lutas."
+	  ],
+	  "yes": [
+		"Você me ajuda a entender essa nova força. Com o arcabuz, estarei mais preparado.",
+		"Essa arma será um grande trunfo para nosso povo. Agradeço por confiar em mim.",
+		"Com essa munição, poderei enfrentar nossos inimigos com algo que eles próprios trouxeram.",
+		"Seu apoio é valioso. Nunca esqueceremos o que fez por nós."
+	  ],
+	  "no": [
+		"Você prefere que continuemos lutando com o que temos, enquanto eles nos superam com essas armas?",
+		"Sem o arcabuz, estaremos em desvantagem. Sua recusa pode nos custar caro.",
+		"Lembre-se, artesão, os tempos estão mudando. Não ajudar agora pode ter consequências.",
+		"Eu não esquecerei que você negou essa chance ao nosso povo."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/indio2.png",
+	  "items": ["Arcabuz", "Munição"],
+	  "quantity": [1, 2],
+	  "brought_items": ["Madeira", "Pedra", "Pena"],
+	  "brought_items_quantity": [5, 5, 5],
+	  "id": 6
+	},
+	{
+	  "start_dialogue": [
+		"Artesão, nossas ferramentas são boas, mas o ferro pode torná-las melhores.",
+		"Ouvi falar das lâminas e instrumentos dos portugueses. Quero que nos ajude a obter ferro.",
+		"Com ele, podemos criar armas e ferramentas mais fortes para nosso povo."
+	  ],
+	  "yes": [
+		"Você nos dá uma chance de evoluir, artesão. Com o ferro, nossas mãos trabalharão com mais força.",
+		"Essas ferramentas nos ajudarão a proteger nossa terra e sustentar nossas famílias.",
+		"Seu apoio será lembrado, assim como o progresso que isso trará ao nosso povo.",
+		"Com o ferro, construiremos nosso futuro. Agradeço profundamente."
+	  ],
+	  "no": [
+		"Você nos nega a chance de melhorar nossas ferramentas, enquanto outros já estão mais avançados.",
+		"Sem o ferro, ficaremos para trás. Isso pode enfraquecer nosso povo.",
+		"Lembre-se, artesão, que quem não ajuda no crescimento do povo pode acabar isolado.",
+		"Não esquecerei sua recusa. O tempo mostrará as consequências dessa escolha."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/indio1.png",
+	  "items": ["Ferro"],
+	  "quantity": [5],
+	  "brought_items": ["Pólvora"],
+	  "brought_items_quantity": [3],
+	  "id": 7
+	},
+	{
+	  "id": 8,
+	  "start_dialogue": [
+		"Você aí, artesão! O tempo urge e preciso estar preparado.",
+		"Um combate se aproxima, e não posso ficar sem meu arcabuz e a devida munição.",
+		"Me forneça isso e estaremos prontos para enfrentar o que vier."
+	  ],
+	  "yes": [
+		"Muito bem, você me deu o que preciso. Agora posso ir ao combate com força total.",
+		"Com esse arcabuz e munição, serei imbatível. Seu trabalho será recompensado.",
+		"Agradeço pela prontidão. Com isso, a vitória estará ao nosso alcance.",
+		"Você foi rápido e eficiente. O inimigo não terá chance!"
+	  ],
+	  "no": [
+		"Você me nega o que preciso para o combate? Isso pode custar caro!",
+		"Sem o arcabuz e a munição, eu estarei em desvantagem. É essa sua intenção?",
+		"Lembre-se, artesão, de que recusar ajuda a um homem de combate não será esquecido.",
+		"Que você não se arrependa dessa escolha quando eu mais precisar e você não estiver lá."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/port1.png",
+	  "items": ["Arcabuz", "Munição"],
+	  "brought_items": ["Pólvora", "Ferro"],
+	  "brought_items_quantity": [2, 2],
+	  "quantity": [1, 4]
+	},
+	{
+	  "id": 9,
+	  "start_dialogue": [
+		"Artesão, tenho aqui algo valioso, o pau-brasil.",
+		"Os portugueses descobriram que essa madeira é perfeita para fazer tinta.",
+		"Preciso que você prepare tinta com isso. Será útil para nossos registros e mercadorias."
+	  ],
+	  "yes": [
+		"Excelente! Sabia que poderia contar com sua habilidade.",
+		"Com essa tinta, faremos grandes coisas. Nossa presença será marcada na história.",
+		"Seu trabalho será bem recompensado. Continue assim, e terá um lugar ao nosso lado.",
+		"A tinta está pronta. Agora podemos usá-la para nossos propósitos. Bom trabalho."
+	  ],
+	  "no": [
+		"Você se recusa a nos ajudar? Isso pode não ser uma decisão sábia.",
+		"Sem essa tinta, nossa missão fica prejudicada. Pense nas consequências.",
+		"Lembre-se, artesão, que negar ajuda a Portugal não será facilmente perdoado.",
+		"Não se esqueça de que aqueles que não colaboram conosco podem enfrentar tempos difíceis."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/port2.png",
+	  "items": ["Tinta"],
+	  "brought_items": ["Pau-Brasil"],
+	  "brought_items_quantity": [2],
+	  "quantity": [2]
+	},
+	{
+	  "id": 10,
+	  "start_dialogue": [
+		"Artesão, tempos difíceis estão à frente.",
+		"Estou me preparando para fogo pesado, e preciso de materiais para reforçar meu equipamento.",
+		"Você deve ter algo que possa me ajudar a enfrentar essa batalha.",
+		"Tenho um pouco de veneno que roubei para lhe dar em troca."
+	  ],
+	  "yes": [
+		"Ótimo! Com esses materiais, estarei pronto para o pior.",
+		"Sua ajuda veio em boa hora. Agora tenho o que preciso para suportar o fogo inimigo.",
+		"Esse reforço fará toda a diferença no campo de batalha. Não esquecerei o que fez.",
+		"Sua eficiência pode muito bem salvar vidas. Agradeço por isso."
+	  ],
+	  "no": [
+		"Você me recusa materiais quando mais preciso? Isso pode ser um erro grave.",
+		"Sem esses reforços, estarei em desvantagem. Espero que você saiba o que está fazendo.",
+		"Lembre-se, artesão, quem se nega a ajudar em tempos de guerra pode pagar um preço alto.",
+		"Não esquecerei essa recusa, e o fogo que enfrento pode muito bem se voltar contra você."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/port1.png",
+	  "items": ["Pólvora", "Ferro", "Munição"],
+	  "brought_items": ["Veneno"],
+	  "brought_items_quantity": [1],
+	  "quantity": [3, 5, 2]
+	},
+	{
+	  "id": 11,
+	  "start_dialogue": [
+		"Artesão, trouxe duas coisas que podem ser de grande utilidade.",
+		"Aqui está pau-brasil para a tinta e um veneno potente.",
+		"Preciso que você combine os dois. Quero uma tinta envenenada, algo sutil, para eliminar inimigos sem alarde."
+	  ],
+	  "yes": [
+		"Perfeito! Com essa tinta, nossos inimigos não saberão o que os atingiu.",
+		"Seu trabalho será vital para nossas operações. Isso nos dará uma vantagem silenciosa.",
+		"Esta tinta envenenada pode virar o jogo a nosso favor. Você será bem recompensado.",
+		"Com essa arma sutil, nossos oponentes não terão chance. Agradeço por sua dedicação."
+	  ],
+	  "no": [
+		"Você nega um pedido tão simples, artesão? Isso pode ser um erro que não vou esquecer.",
+		"Sem essa tinta envenenada, nossos inimigos terão mais tempo do que deveriam.",
+		"Pense bem antes de recusar. Negar algo assim pode ter sérias consequências.",
+		"Lembre-se, artesão, que aqueles que se recusam a ajudar podem acabar caindo junto com os inimigos."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/port2.png",
+	  "items": ["Tinta Envenenada"],
+	  "quantity": [2],
+	  "brought_items": ["Pau-Brasil", "Tinta"],
+	  "brought_items_quantity": [1, 1]
+	},
+	{
+	  "start_dialogue": [
+		"Artesão, você não vai acreditar no que encontrei!",
+		"Caçei um monte de penas raras, valiosas. São perfeitas para flechas ou ornamentos.",
+		"Mas estou precisando de pedras. O que me diz de fazermos uma troca?"
+	  ],
+	  "yes": [
+		"Ótimo! Essas penas valem muito mais do que algumas pedras.",
+		"Você vai se impressionar com a qualidade dessas penas. Perfeitas para seu trabalho.",
+		"Com essas penas, suas criações serão inigualáveis. Foi uma troca justa.",
+		"Que bom negócio fizemos! As pedras que me deu vão ser muito úteis."
+	  ],
+	  "no": [
+		"Você recusa uma oferta tão valiosa? As penas que tenho são raríssimas!",
+		"Sem essas pedras, terei que encontrar outro jeito, mas não se esqueça dessa oportunidade perdida.",
+		"Lembre-se, quem recusa uma boa troca pode não ter outra chance.",
+		"Espero que não se arrependa de ter negado uma oferta como essa, artesão."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/port1.png",
+	  "items": ["Pedra"],
+	  "brought_items": ["Pena"],
+	  "brought_items_quantity": [15],
+	  "quantity": [5]
+	},
+	{
+	  "id": 13,
+	  "start_dialogue": [
+		"Artesão, preciso de sua ajuda urgente.",
+		"Meus colegas estão feridos, e preciso de couro para curar suas feridas e proteger seus corpos.",
+		"Trouxe ervas medicinais. Com elas, você pode fazer um bálsamo curativo."
+	  ],
+	  "yes": [
+		"Agradeço por sua ajuda, artesão. Isso salvará meus companheiros.",
+		"Com esse couro e o bálsamo, poderemos tratar as feridas rapidamente.",
+		"Seu trabalho será lembrado por todos nós. Você nos deu uma chance de lutar outro dia.",
+		"Esses materiais são exatamente o que precisávamos. Nossa gratidão será eterna."
+	  ],
+	  "no": [
+		"Você recusa ajudar homens feridos? Isso é uma escolha cruel, artesão.",
+		"Sem o couro e o bálsamo, meus colegas continuarão a sofrer.",
+		"Lembre-se, a vida daqueles que você não ajuda pode pesar na sua consciência.",
+		"Sua recusa será lembrada, e pode custar vidas. Que isso não recaia sobre você."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/port2.png",
+	  "items": ["Bálsamo Curativo", "Couro"],
+	  "brought_items": ["Erva Medicinal"],
+	  "brought_items_quantity": [5],
+	  "quantity": [1, 3]
+	},
+	{
+	  "id": 14,
+	  "start_dialogue": [
+		"Artesão, estive explorando a natureza e encontrei materiais valiosos.",
+		"Mas agora preciso de algo mais direto. Quero um arcabuz para dar um trato no meu capitão.",
+		"Posso te oferecer esses materiais em troca. O que me diz?"
+	  ],
+	  "yes": [
+		"Muito bem, artesão. Esse arcabuz vai servir perfeitamente para o que preciso.",
+		"Esses materiais que te dei são de grande valor. Espero que saiba usá-los bem.",
+		"Com esse arcabuz em mãos, o capitão não vai saber o que o atingiu.",
+		"Boa troca, não? Agora, com isso, as coisas vão mudar para mim."
+	  ],
+	  "no": [
+		"Você recusa um negócio desses? Esses materiais valem muito, artesão!",
+		"Sem o arcabuz, terei que achar outro jeito. Não esperava essa recusa de você.",
+		"Lembre-se, artesão, quem rejeita uma boa oferta pode se arrepender depois.",
+		"Que você não se arrependa de ter negado essa oportunidade. Vou me lembrar disso."
+	  ],
+	  "weight": 1,
+	  "image": "res://sprites/npcs/port1.png",
+	  "items": ["Arcabuz"],
+	  "brought_items": ["Pau-Brasil", "Ferro"],
+	  "brought_items_quantity": [5, 5],
+	  "quantity": [1]
 	}
   ]
 }

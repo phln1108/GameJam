@@ -15,7 +15,6 @@ static func get_json_data() ->  Array[Npc]:
 	
 	for parsed_npc in parsed_results["npcs"]:
 		var npc := Npc.new()
-		npc.id = parsed_npc["id"]
 		npc.image = parsed_npc["image"]
 		npc.start_dialogue = parsed_npc["start_dialogue"]
 		npc.no = parsed_npc["no"]
@@ -23,6 +22,8 @@ static func get_json_data() ->  Array[Npc]:
 		npc.items = parsed_npc["items"]
 		npc.weight = parsed_npc["weight"]
 		npc.quantity = parsed_npc["quantity"]
+		
+		print(npc.weight)
 		npcs.append(npc)
 	
 	return npcs

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://052leh21cdrj"
-path="res://.godot/imported/poison_dye.png-9c55a715b0045e0bdef5cefa7efff53f.ctex"
+path="res://.godot/imported/poison_dye.png-483eb410bb7d9f4d3f6f66b2fe4ac0dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Items/poison_dye.png"
-dest_files=["res://.godot/imported/poison_dye.png-9c55a715b0045e0bdef5cefa7efff53f.ctex"]
+source_file="res://Sprites/items/poison_dye.png"
+dest_files=["res://.godot/imported/poison_dye.png-483eb410bb7d9f4d3f6f66b2fe4ac0dc.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cigaj0fh3dfy1"
-path="res://.godot/imported/healing_herb.png-04c1cad68692507c05f19064e521c243.ctex"
+path="res://.godot/imported/healing_herb.png-f7ed44e46401b6b23694c174433f4a96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Items/healing_herb.png"
-dest_files=["res://.godot/imported/healing_herb.png-04c1cad68692507c05f19064e521c243.ctex"]
+source_file="res://Sprites/items/healing_herb.png"
+dest_files=["res://.godot/imported/healing_herb.png-f7ed44e46401b6b23694c174433f4a96.ctex"]
 
 [params]
 

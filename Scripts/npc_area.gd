@@ -12,15 +12,18 @@ var step_rotation= deg_to_rad(.5)
 
 var target :Control 
 
+#se é a fala final
+var ending = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	HistoryController.new_npc.connect(_on_new_npc)
 	HistoryController.get_random_npc()
+	HistoryController.requirements_completed.connect(_on_complete_requirements)
+	
+	dialogue.finished_dialogue.connect(_on_finished_dialogue)
 	
 	skip_button.pressed.connect(_on_skip)
-	
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -35,6 +38,8 @@ func _process(delta: float) -> void:
 		if distance.x < .1:
 			walk_npc = false
 			if target == $NpcStopPoint:
+				skip_button.visible = true
+				
 				npc_sprite.rotation = 0
 				dialogue.dialogues = HistoryController.current_npc.start_dialogue
 				dialogue.current_dialogue = 0
@@ -48,8 +53,8 @@ func _process(delta: float) -> void:
 				get_tree().create_timer(2).timeout.connect(HistoryController.get_random_npc)
 				
 
-
 func _on_new_npc() -> void:
+	skip_button.visible = false
 	target = $NpcStopPoint
 	var new_npc = HistoryController.current_npc
 	npc_sprite = Sprite2D.new()
@@ -58,9 +63,34 @@ func _on_new_npc() -> void:
 	npc_sprite.position = $NpcSpawn.position
 	add_child(npc_sprite)
 	walk_npc = true
-	
+
 func _on_skip() -> void:
-	target = $NpcDespawnPoint
-	dialogue.hide_dialogue()
-	walk_npc = true
+	skip_button.visible = false
+	HistoryController.requirements_refused.emit()
 	skip_button.release_focus()
+	dialogue.dialogues = HistoryController.current_npc.no
+	dialogue.current_dialogue = 0
+	dialogue.dialogue_text = dialogue.dialogues[0]
+
+	print(HistoryController.current_npc.no)
+	dialogue.show_dialogue()
+	ending = true
+	
+	
+func _on_complete_requirements() -> void:
+	skip_button.visible = false
+	
+	dialogue.dialogues = HistoryController.current_npc.yes
+	dialogue.current_dialogue = 0
+	dialogue.dialogue_text = dialogue.dialogues[0]
+
+	print(HistoryController.current_npc.yes)
+	dialogue.show_dialogue()
+	ending = true
+
+func _on_finished_dialogue():
+	if ending:
+		target = $NpcDespawnPoint
+		dialogue.hide_dialogue()
+		walk_npc = true
+		ending = false

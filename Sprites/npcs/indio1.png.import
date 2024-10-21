@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c85iokqwuilts"
-path="res://.godot/imported/poison_ammo.png-5fb16bec79e30d3c60a44c4557ec1393.ctex"
+uid="uid://lcux138kjg8u"
+path="res://.godot/imported/indio1.png-66d7a6681a5a60caa77bae0d36046c9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/items/poison_ammo.png"
-dest_files=["res://.godot/imported/poison_ammo.png-5fb16bec79e30d3c60a44c4557ec1393.ctex"]
+source_file="res://Sprites/npcs/indio1.png"
+dest_files=["res://.godot/imported/indio1.png-66d7a6681a5a60caa77bae0d36046c9d.ctex"]
 
 [params]
 
