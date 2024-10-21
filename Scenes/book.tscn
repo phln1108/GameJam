@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqbps2eaycq4l"]
+[gd_scene load_steps=11 format=3 uid="uid://dqbps2eaycq4l"]
 
+[ext_resource type="Texture2D" uid="uid://ppvcqcimqqmf" path="res://Sprites/book/recipe1.png" id="2_33byu"]
 [ext_resource type="Script" path="res://Scripts/book.gd" id="2_mtr6s"]
+[ext_resource type="Texture2D" uid="uid://dfvq42pwawmbo" path="res://Sprites/book/recipe2.png" id="3_p0afj"]
+[ext_resource type="Texture2D" uid="uid://db1neux6e5556" path="res://Sprites/book/recipe3.png" id="4_a7dbj"]
+[ext_resource type="Texture2D" uid="uid://curyfxcgcd4x1" path="res://Sprites/book/recipe4.png" id="5_3wfd8"]
+[ext_resource type="Texture2D" uid="uid://dabbkjm0bn6bm" path="res://Sprites/book/recipe5.png" id="6_imtli"]
+[ext_resource type="Texture2D" uid="uid://d4apj357mnncv" path="res://Sprites/book/recipe6.png" id="7_ecf7r"]
+[ext_resource type="Texture2D" uid="uid://d4e3fwoktbirw" path="res://Sprites/book/recipe7.png" id="8_simw5"]
+[ext_resource type="Texture2D" uid="uid://b7bmttpyyi38p" path="res://Sprites/book/recipe8.png" id="9_163mp"]
+[ext_resource type="Texture2D" uid="uid://dik7uqj4c4qwq" path="res://Sprites/book/recipe9.png" id="10_cv2ag"]
 
 [node name="Sprite2D" type="Sprite2D"]
-position = Vector2(616, 326)
-scale = Vector2(2.94531, 5.07812)
+scale = Vector2(10, 10)
+texture = ExtResource("2_33byu")
 script = ExtResource("2_mtr6s")
+pages = Array[Texture]([ExtResource("2_33byu"), ExtResource("3_p0afj"), ExtResource("4_a7dbj"), ExtResource("5_3wfd8"), ExtResource("6_imtli"), ExtResource("7_ecf7r"), ExtResource("8_simw5"), ExtResource("9_163mp"), ExtResource("10_cv2ag")])

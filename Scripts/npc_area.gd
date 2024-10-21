@@ -60,7 +60,7 @@ func _on_new_npc() -> void:
 	target = $NpcStopPoint
 	var new_npc = HistoryController.current_npc
 	npc_sprite = Sprite2D.new()
-	npc_sprite.texture = load(new_npc.image)
+	npc_sprite.texture = ResourceLoader.load(new_npc.image)
 	npc_sprite.scale = Vector2(10,10)
 	npc_sprite.position = $NpcSpawn.position
 	add_child(npc_sprite)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://idlax0qtqn0y"]
+[gd_scene load_steps=12 format=3 uid="uid://idlax0qtqn0y"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_c1g3l"]
 [ext_resource type="Texture2D" uid="uid://b8f3fvty1ssm5" path="res://Sprites/tent.png" id="1_yteoa"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cud7wtxkj3mrw" path="res://Scenes/Crafting.tscn" id="4_up1br"]
 [ext_resource type="PackedScene" uid="uid://syip5gjrcc0e" path="res://Scenes/dialogueBox.tscn" id="5_xncxk"]
 [ext_resource type="Texture2D" uid="uid://cwp4bw4margdd" path="res://Sprites/UI/skip.png" id="6_ruf4v"]
+[ext_resource type="PackedScene" uid="uid://dqbps2eaycq4l" path="res://Scenes/book.tscn" id="7_6ts4o"]
+[ext_resource type="Texture2D" uid="uid://b4f0ljh6yd3xk" path="res://Sprites/UI/xiiiis.png" id="8_j7swr"]
 [ext_resource type="Texture2D" uid="uid://c6cx668hqpgcy" path="res://Sprites/UI/setinha.png" id="8_lld6u"]
 
 [node name="Game" type="Control" node_paths=PackedStringArray("tent", "crafting", "notes")]
@@ -48,6 +50,7 @@ grow_vertical = 2
 texture = ExtResource("1_yteoa")
 
 [node name="Tent" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -94,7 +97,6 @@ offset_bottom = 170.0
 grow_vertical = 2
 
 [node name="Notes" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -111,14 +113,37 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.788235)
 
+[node name="Sprite2D" parent="Notes" node_paths=PackedStringArray("back", "forward") instance=ExtResource("7_6ts4o")]
+position = Vector2(530, 300)
+back = NodePath("../back")
+forward = NodePath("../foward")
+
 [node name="go_tent" type="TextureButton" parent="Notes"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 16.0
+offset_bottom = 16.0
 scale = Vector2(10, 10)
 mouse_filter = 1
+texture_normal = ExtResource("8_j7swr")
+flip_h = true
+
+[node name="back" type="TextureButton" parent="Notes"]
+layout_mode = 0
+offset_top = 440.0
+offset_right = 16.0
+offset_bottom = 456.0
+scale = Vector2(10, 10)
 texture_normal = ExtResource("8_lld6u")
 flip_h = true
+
+[node name="foward" type="TextureButton" parent="Notes"]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 440.0
+offset_right = 916.0
+offset_bottom = 456.0
+scale = Vector2(10, 10)
+texture_normal = ExtResource("8_lld6u")
 
 [node name="CraftingTable" type="Control" parent="."]
 visible = false
@@ -159,4 +184,6 @@ flip_h = true
 [connection signal="pressed" from="Tent/go_crafting" to="." method="_on_go_to_crafting"]
 [connection signal="pressed" from="Tent/go_notes" to="." method="_on_go_to_notes"]
 [connection signal="pressed" from="Notes/go_tent" to="." method="_on_back_from_notes"]
+[connection signal="pressed" from="Notes/back" to="Notes/Sprite2D" method="back_page"]
+[connection signal="pressed" from="Notes/foward" to="Notes/Sprite2D" method="pass_page"]
 [connection signal="pressed" from="CraftingTable/TextureButton" to="." method="_on_back_from_crafting"]
