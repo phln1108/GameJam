@@ -1,7 +1,7 @@
 extends Control
 
 @export var dialogue : Control
-@export var skip_button: Button
+@export var skip_button: TextureButton
 
 var npc_sprite: Sprite2D = null
 var walk_npc: bool = false
@@ -39,6 +39,8 @@ func _process(delta: float) -> void:
 			walk_npc = false
 			if target == $NpcStopPoint:
 				skip_button.visible = true
+				
+				HistoryController.get_items_from_npc.emit()
 				
 				npc_sprite.rotation = 0
 				dialogue.dialogues = HistoryController.current_npc.start_dialogue

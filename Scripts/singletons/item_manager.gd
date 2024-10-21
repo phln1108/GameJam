@@ -34,5 +34,5 @@ func discover_item(discovered_item: Item) -> void:
 	
 	inventory[discovered_item.name] = {
 		"item": discovered_item,
-		"quantity": 10
+		"quantity": 0
 	}

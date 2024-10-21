@@ -190,7 +190,7 @@
 		"Lembre-se, artesão, de que recusar ajuda a um homem de combate não será esquecido.",
 		"Que você não se arrependa dessa escolha quando eu mais precisar e você não estiver lá."
 	  ],
-	  "weight": 1,
+	  "weight": -1,
 	  "image": "res://sprites/npcs/port1.png",
 	  "items": ["Arcabuz", "Munição"],
 	  "brought_items": ["Pólvora", "Ferro"],
@@ -216,7 +216,7 @@
 		"Lembre-se, artesão, que negar ajuda a Portugal não será facilmente perdoado.",
 		"Não se esqueça de que aqueles que não colaboram conosco podem enfrentar tempos difíceis."
 	  ],
-	  "weight": 1,
+	  "weight": -1,
 	  "image": "res://sprites/npcs/port2.png",
 	  "items": ["Tinta"],
 	  "brought_items": ["Pau-Brasil"],
@@ -243,7 +243,7 @@
 		"Lembre-se, artesão, quem se nega a ajudar em tempos de guerra pode pagar um preço alto.",
 		"Não esquecerei essa recusa, e o fogo que enfrento pode muito bem se voltar contra você."
 	  ],
-	  "weight": 1,
+	  "weight": -1,
 	  "image": "res://sprites/npcs/port1.png",
 	  "items": ["Pólvora", "Ferro", "Munição"],
 	  "brought_items": ["Veneno"],
@@ -269,7 +269,7 @@
 		"Pense bem antes de recusar. Negar algo assim pode ter sérias consequências.",
 		"Lembre-se, artesão, que aqueles que se recusam a ajudar podem acabar caindo junto com os inimigos."
 	  ],
-	  "weight": 1,
+	  "weight": -1,
 	  "image": "res://sprites/npcs/port2.png",
 	  "items": ["Tinta Envenenada"],
 	  "quantity": [2],
@@ -294,7 +294,7 @@
 		"Lembre-se, quem recusa uma boa troca pode não ter outra chance.",
 		"Espero que não se arrependa de ter negado uma oferta como essa, artesão."
 	  ],
-	  "weight": 1,
+	  "weight": -1,
 	  "image": "res://sprites/npcs/port1.png",
 	  "items": ["Pedra"],
 	  "brought_items": ["Pena"],
@@ -320,7 +320,7 @@
 		"Lembre-se, a vida daqueles que você não ajuda pode pesar na sua consciência.",
 		"Sua recusa será lembrada, e pode custar vidas. Que isso não recaia sobre você."
 	  ],
-	  "weight": 1,
+	  "weight": -1,
 	  "image": "res://sprites/npcs/port2.png",
 	  "items": ["Bálsamo Curativo", "Couro"],
 	  "brought_items": ["Erva Medicinal"],
@@ -346,7 +346,7 @@
 		"Lembre-se, artesão, quem rejeita uma boa oferta pode se arrepender depois.",
 		"Que você não se arrependa de ter negado essa oportunidade. Vou me lembrar disso."
 	  ],
-	  "weight": 1,
+	  "weight": -1,
 	  "image": "res://sprites/npcs/port1.png",
 	  "items": ["Arcabuz"],
 	  "brought_items": ["Pau-Brasil", "Ferro"],

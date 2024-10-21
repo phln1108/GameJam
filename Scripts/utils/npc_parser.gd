@@ -22,7 +22,8 @@ static func get_json_data() ->  Array[Npc]:
 		npc.items = parsed_npc["items"]
 		npc.weight = parsed_npc["weight"]
 		npc.quantity = parsed_npc["quantity"]
-		
+		npc.brought_items = parsed_npc["brought_items"]
+		npc.brought_items_quantity = parsed_npc["brought_items_quantity"]
 		print(npc.weight)
 		npcs.append(npc)
 	
