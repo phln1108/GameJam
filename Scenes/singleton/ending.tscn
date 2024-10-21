@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://jq6d2sf4fyc1"]
 
-[ext_resource type="Script" path="res://Scripts/singletons/transition.gd" id="1_bi6lr"]
+[ext_resource type="Script" path="res://Scripts/singletons/eding.gd" id="1_bi6lr"]
 [ext_resource type="FontFile" uid="uid://bxywmu6nfkka0" path="res://assets/fonts/Alkhemikal.ttf" id="2_v4yl1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xg2l3"]

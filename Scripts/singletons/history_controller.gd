@@ -74,5 +74,5 @@ func _on_requirements_refused() -> void:
 	refused_offers +=1
 
 func _on_get_item_npc():
-	for item in gave_items.keys():
-		ItemManager.inventory[item].quantity += gave_items[item]
+	for i in range(len(current_npc.brought_items)):
+		ItemManager.inventory[current_npc.brought_items[i]].quantity += current_npc.brought_items_quantity[i]

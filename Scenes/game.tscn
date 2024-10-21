@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://idlax0qtqn0y"]
+[gd_scene load_steps=10 format=3 uid="uid://idlax0qtqn0y"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_c1g3l"]
 [ext_resource type="Texture2D" uid="uid://b8f3fvty1ssm5" path="res://Sprites/tent.png" id="1_yteoa"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c2qibn7mpf133" path="res://Scenes/backpack.tscn" id="3_ohmnk"]
 [ext_resource type="PackedScene" uid="uid://cud7wtxkj3mrw" path="res://Scenes/Crafting.tscn" id="4_up1br"]
 [ext_resource type="PackedScene" uid="uid://syip5gjrcc0e" path="res://Scenes/dialogueBox.tscn" id="5_xncxk"]
+[ext_resource type="Texture2D" uid="uid://cwp4bw4margdd" path="res://Sprites/UI/skip.png" id="6_ruf4v"]
 [ext_resource type="Texture2D" uid="uid://c6cx668hqpgcy" path="res://Sprites/UI/setinha.png" id="8_lld6u"]
 
 [node name="Game" type="Control" node_paths=PackedStringArray("tent", "crafting", "notes")]
@@ -47,7 +48,6 @@ grow_vertical = 2
 texture = ExtResource("1_yteoa")
 
 [node name="Tent" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -74,11 +74,14 @@ offset_right = 1010.0
 offset_bottom = 600.0
 flat = true
 
-[node name="skip" type="Button" parent="Tent"]
+[node name="skip" type="TextureButton" parent="Tent"]
 layout_mode = 0
-offset_left = 980.0
-offset_right = 1060.0
-offset_bottom = 80.0
+offset_left = 900.0
+offset_top = 20.0
+offset_right = 916.0
+offset_bottom = 36.0
+scale = Vector2(10, 10)
+texture_normal = ExtResource("6_ruf4v")
 
 [node name="Control" type="Control" parent="Tent"]
 layout_mode = 1
@@ -109,7 +112,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.788235)
 
 [node name="go_tent" type="TextureButton" parent="Notes"]
-visible = false
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
@@ -119,6 +121,7 @@ texture_normal = ExtResource("8_lld6u")
 flip_h = true
 
 [node name="CraftingTable" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
