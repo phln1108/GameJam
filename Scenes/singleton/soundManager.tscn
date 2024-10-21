@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlwjypp4nbwt4"]
+
+[ext_resource type="Script" path="res://Scenes/singleton/soundManager.gd" id="1_3i764"]
+[ext_resource type="AudioStream" uid="uid://cpr75evf44qrm" path="res://Sounds/pinponpoin2.mp3" id="2_mrxnm"]
+[ext_resource type="AudioStream" uid="uid://ch75c6sk2hn1d" path="res://Sounds/TENSIONADO (POD USAR).mp3" id="3_ujsaq"]
+
+[node name="Sound" type="Node"]
+script = ExtResource("1_3i764")
+musics = Array[AudioStream]([ExtResource("2_mrxnm"), ExtResource("3_ujsaq")])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

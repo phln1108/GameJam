@@ -1,14 +1,15 @@
 extends Control
 
-
-
-var scenarios = []
+var scenarios = [
+	"A fumaça das aldeias incendiadas ainda pairava no horizonte, mas havia esperança. Com suas mãos habilidosas, você entregou aos povos originários mais do que simples ferramentas – você deu a eles a chance de resistir. Seu nome será sussurrado entre as árvores, uma lenda viva que lutou ao lado daqueles que defendiam sua terra. Suas ações ajudaram a manter viva a cultura, a coragem e a força de um povo. Embora os invasores continuem a avançar, sua contribuição deu à resistência fôlego e fé. Para os povos originários, você é mais que um aliado – é um guardião da terra.",
+	"Sob o estandarte da Coroa Portuguesa, suas habilidades se tornaram uma peça chave na consolidação da conquista. O território, antes hostil e desconhecido, agora floresce sob o domínio da Coroa, e sua mão esteve presente em cada passo dessa expansão. Ao lado dos colonizadores, você forjou armas, munição e estruturas que fortaleceram o império. Sua lealdade foi reconhecida e recompensada com terras e títulos, e seu nome será lembrado nas crônicas da conquista do Novo Mundo. Para os portugueses, você é mais que um artesão – é um construtor do futuro que eles tanto sonharam.",
+]
 
 @onready var timer: Timer = $characterTimer
 
 signal finished_dialogue
 
-@export var dialogues: Array
+@export var dialogues: Array = []
 var dialogue_text: String
 
 var current_char: int = 0
@@ -19,23 +20,29 @@ var started: = false
 
 @export var step = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func finish() -> void:
+	$Label.text = ""
+	dialogues.append(scenarios[1 if HistoryController.wheight == -5 else 0])
+	dialogue_text = scenarios[1 if HistoryController.wheight == -5 else 0]
+	$ColorRect.visible = true
 	$Timer.start()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func _on_timer_timeout() -> void:
 	print(step)
 	step += 10
 	$ColorRect.color += Color(0,0,0,0.1)
 	if step == 100:
+		$Label.visible = true
+		started = true
+		show_dialogue()
 		$Timer.stop()
 	else:
 		$Timer.start()
 
+
+func _ready() -> void:
+	#finish()
+	pass
 
 func _input(event: InputEvent) -> void:
 	if not started:
@@ -53,6 +60,7 @@ func _input(event: InputEvent) -> void:
 			else:
 				finished_dialogue.emit()
 				started = false
+				$Label2.visible = true
 				
 func show_dialogue():
 	started = true

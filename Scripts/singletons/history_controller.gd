@@ -21,10 +21,13 @@ var current_npc: Npc = null
 var items_left_to_give: Dictionary = {}
 var gave_items: Dictionary = {}
 
+var limit := 1
+
 # -1: portugueses
 # +1: indios
 # indios win > > neutro >  > portugueses win
-var wheight: int = 0 
+var wheight: int = 0
+		
 
 func _ready() -> void:
 	npcs = NpcParser.get_json_data()
@@ -51,7 +54,10 @@ func get_random_npc() -> void:
 		gave_items[current_npc.items[i]] = 0
 	
 	print(gave_items)
-	new_npc.emit()
+	if abs(wheight) < limit: 
+		new_npc.emit()
+	else:
+		Ending.finish()
 	
 func verify_items_to_give() -> void:
 	for quantity in items_left_to_give.values():
