@@ -9,3 +9,5 @@ class_name Npc
 @export var weight: int
 @export var items: Array
 @export var quantity: Array
+@export var brought_items: Array
+@export var brought_items_quantity: Array

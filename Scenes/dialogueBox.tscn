@@ -18,12 +18,17 @@ var current_char: int = 0
 var current_dialogue: int = 0
 
 var is_typing: bool = false
+var started: = false
 
 func _ready() -> void:
 	$Label.text = \"\"
-	#visible = false
+	visible = false
+	HistoryController.item_to_give_updated.connect(show_requirements)
 	
 func _input(event: InputEvent) -> void:
+	if not started:
+		return
+	
 	if event.is_action_pressed(\"skip_dialogue\"):
 		if is_typing:
 			$Label.text = dialogue_text
@@ -35,14 +40,16 @@ func _input(event: InputEvent) -> void:
 				show_dialogue()
 			else:
 				finished_dialogue.emit()
+				show_requirements()
+				started = false
 	
 
 func show_dialogue():
+	started = true
 	visible = true
 	$Label.text = \"\"
 	current_char = 0
 	is_typing = true
-	
 	_type()
 
 func _type():
@@ -60,6 +67,19 @@ func _on_timer_timeout() -> void:
 
 func hide_dialogue()-> void :
 	visible = false
+
+func show_requirements():
+	$Label.text = \"Preciso de: \"
+	for item in HistoryController.items_left_to_give.keys():
+		var quantity = HistoryController.items_left_to_give[item]
+		if quantity > 0:
+			$Label.text += str(quantity) +\" \"+ item + \", \"
+			
+	
+	
+	
+	
+	
 "
 
 [sub_resource type="LabelSettings" id="LabelSettings_lbbcw"]

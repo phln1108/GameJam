@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b37i82q0ovjm5"
-path="res://.godot/imported/poison_arrow.png-e90e7354d991406fbaf64bd0f16c3330.ctex"
+path="res://.godot/imported/poison_arrow.png-24c5501b5c7b3ec2982547155761c7b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Items/poison_arrow.png"
-dest_files=["res://.godot/imported/poison_arrow.png-e90e7354d991406fbaf64bd0f16c3330.ctex"]
+source_file="res://Sprites/items/poison_arrow.png"
+dest_files=["res://.godot/imported/poison_arrow.png-24c5501b5c7b3ec2982547155761c7b7.ctex"]
 
 [params]
 

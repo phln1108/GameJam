@@ -157,8 +157,8 @@
 	  "name": "Bálsamo Curativo",
 	  "image": "res://Sprites/Items/herbal_elixir.png",
 	  "description": "Um unguento feito com ervas medicinais, capaz de restaurar a vitalidade e curar feridas.",
-	  "craft_items": ["Munição", "Veneno"],
-	  "craft_quantity": [1, 1],
+	  "craft_items": ["Pedra", "Erva Medicinal"],
+	  "craft_quantity": [2, 1],
 	  "output": 1,
 	  "know": false
 	}

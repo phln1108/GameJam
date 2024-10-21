@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://idlax0qtqn0y"]
+[gd_scene load_steps=9 format=3 uid="uid://idlax0qtqn0y"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_c1g3l"]
 [ext_resource type="Texture2D" uid="uid://b8f3fvty1ssm5" path="res://Sprites/tent.png" id="1_yteoa"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c2qibn7mpf133" path="res://Scenes/backpack.tscn" id="3_ohmnk"]
 [ext_resource type="PackedScene" uid="uid://cud7wtxkj3mrw" path="res://Scenes/Crafting.tscn" id="4_up1br"]
 [ext_resource type="PackedScene" uid="uid://syip5gjrcc0e" path="res://Scenes/dialogueBox.tscn" id="5_xncxk"]
+[ext_resource type="Texture2D" uid="uid://c6cx668hqpgcy" path="res://Sprites/UI/setinha.png" id="8_lld6u"]
 
 [node name="Game" type="Control" node_paths=PackedStringArray("tent", "crafting", "notes")]
 layout_mode = 3
@@ -107,12 +108,15 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.788235)
 
-[node name="go_tent" type="Button" parent="Notes"]
+[node name="go_tent" type="TextureButton" parent="Notes"]
+visible = false
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 scale = Vector2(10, 10)
 mouse_filter = 1
+texture_normal = ExtResource("8_lld6u")
+flip_h = true
 
 [node name="CraftingTable" type="Control" parent="."]
 layout_mode = 1
@@ -141,12 +145,15 @@ layout_mode = 0
 offset_bottom = 180.0
 mouse_filter = 1
 
-[node name="Button" type="Button" parent="CraftingTable"]
+[node name="TextureButton" type="TextureButton" parent="CraftingTable"]
 layout_mode = 0
-offset_right = 80.0
-offset_bottom = 80.0
+offset_right = 16.0
+offset_bottom = 16.0
+scale = Vector2(10, 10)
+texture_normal = ExtResource("8_lld6u")
+flip_h = true
 
 [connection signal="pressed" from="Tent/go_crafting" to="." method="_on_go_to_crafting"]
 [connection signal="pressed" from="Tent/go_notes" to="." method="_on_go_to_notes"]
 [connection signal="pressed" from="Notes/go_tent" to="." method="_on_back_from_notes"]
-[connection signal="pressed" from="CraftingTable/Button" to="." method="_on_back_from_crafting"]
+[connection signal="pressed" from="CraftingTable/TextureButton" to="." method="_on_back_from_crafting"]
