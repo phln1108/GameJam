@@ -7,9 +7,9 @@
 font = ExtResource("2_6y3qn")
 font_size = 32
 
-[sub_resource type="LabelSettings" id="LabelSettings_m41of"]
-font = ExtResource("2_6y3qn")
-font_size = 64
+[sub_resource type="Theme" id="Theme_1l0vp"]
+default_font = ExtResource("2_6y3qn")
+default_font_size = 64
 
 [node name="Transition" type="Control"]
 z_index = 10
@@ -58,16 +58,22 @@ clip_text = true
 [node name="characterTimer" type="Timer" parent="."]
 wait_time = 0.05
 
-[node name="Label2" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 400.0
-offset_top = 480.0
-offset_right = 640.0
-offset_bottom = 560.0
-text = "Fim."
-label_settings = SubResource("LabelSettings_m41of")
-horizontal_alignment = 1
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -86.0
+offset_right = 74.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1l0vp")
+text = "Menu"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="characterTimer" to="." method="_on_character_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

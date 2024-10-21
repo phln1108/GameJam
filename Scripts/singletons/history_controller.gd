@@ -21,7 +21,7 @@ var current_npc: Npc = null
 var items_left_to_give: Dictionary = {}
 var gave_items: Dictionary = {}
 
-var limit := 1
+var limit := 6
 
 # -1: portugueses
 # +1: indios

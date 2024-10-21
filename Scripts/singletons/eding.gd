@@ -60,7 +60,7 @@ func _input(event: InputEvent) -> void:
 			else:
 				finished_dialogue.emit()
 				started = false
-				$Label2.visible = true
+				$Button.visible = true
 				
 func show_dialogue():
 	started = true
@@ -84,3 +84,7 @@ func _type():
 func _on_character_timer_timeout() -> void:
 	if is_typing:
 		_type()
+
+
+func _on_button_pressed() -> void:
+	$Node2D.get_tree().change_scene_to_file("res://Scenes/Menu.tscn")
