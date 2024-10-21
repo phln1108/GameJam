@@ -61,6 +61,7 @@ func _input(event: InputEvent) -> void:
 				finished_dialogue.emit()
 				started = false
 				$Button.visible = true
+				mouse_filter = MOUSE_FILTER_STOP
 				
 func show_dialogue():
 	started = true

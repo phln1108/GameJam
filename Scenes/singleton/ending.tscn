@@ -59,20 +59,22 @@ clip_text = true
 wait_time = 0.05
 
 [node name="Button" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -74.0
-offset_top = -86.0
-offset_right = 74.0
-offset_bottom = -12.0
+offset_left = -80.0
+offset_top = 180.0
+offset_right = 68.0
+offset_bottom = 254.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_1l0vp")
-text = "Menu"
+text = "Fim"
+flat = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="characterTimer" to="." method="_on_character_timer_timeout"]
