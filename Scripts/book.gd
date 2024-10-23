@@ -22,12 +22,14 @@ func append_page(page: String) -> void:
 func pass_page():
 	current_page += 1
 	forward.visible = not len(pages) -1 == current_page
+	back.visible = true
 	
 	texture = pages[current_page]
 	
 func back_page():
 	current_page -= 1
 	back.visible = not 0 == current_page
+	forward.visible = true
 	
 	texture = pages[current_page]
 
