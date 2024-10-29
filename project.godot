@@ -27,9 +27,14 @@ Ending="*res://Scenes/singleton/ending.tscn"
 
 window/size/viewport_width=1060
 window/size/viewport_height=600
+window/size/mode=3
 window/size/window_width_override=1152
 window/size/window_height_override=648
 window/stretch/mode="viewport"
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
 
 [input]
 

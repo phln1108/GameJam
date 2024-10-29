@@ -59,6 +59,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DialogueBox" parent="Tent" instance=ExtResource("5_xncxk")]
+visible = false
 layout_mode = 1
 
 [node name="go_crafting" type="Button" parent="Tent"]
@@ -97,6 +98,7 @@ offset_bottom = 170.0
 grow_vertical = 2
 
 [node name="Notes" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

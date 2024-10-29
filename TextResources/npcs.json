@@ -15,7 +15,7 @@
 		"Sua recusa enfraquece nossa resistência. Que essa decisão pese em seu coração."
 	  ],
 	  "weight": 1,
-	  "image": "res://sprites/npcs/indio1.png",
+	  "image": "res://Sprites/npcs/indio1.png",
 	  "items": ["Arco"],
 	  "quantity": [1],
 	  "brought_items": ["Veneno"],
@@ -35,7 +35,7 @@
 		"Nossos guerreiros vão para a batalha sem flechas, e você carrega parte dessa culpa."
 	  ],
 	  "weight": 1,
-	  "image": "res://sprites/npcs/indio2.png",
+	  "image": "res://Sprites/npcs/indio2.png",
 	  "items": ["Flecha"],
 	  "quantity": [10],
 	  "brought_items": ["Ferro", "Pólvora", "Arcabuz", "Munição"],
@@ -60,7 +60,7 @@
 		"Sua decisão pode ter consequências. Que o futuro não te cobre isso."
 	  ],
 	  "weight": 1,
-	  "image": "res://sprites/npcs/indio1.png",
+	  "image": "res://Sprites/npcs/indio1.png",
 	  "items": ["Flecha Envenenada"],
 	  "brought_items": ["Veneno", "Madeira", "Pena"],
 	  "brought_items_quantity": [1, 5, 1, 10],
@@ -86,7 +86,7 @@
 		"Que o tempo não apague o que você negou fazer hoje."
 	  ],
 	  "weight": 1,
-	  "image": "res://sprites/npcs/indio2.png",
+	  "image": "res://Sprites/npcs/indio2.png",
 	  "items": ["Tinta"],
 	  "quantity": [1],
 	  "brought_items": ["Pau-Brasil", "Pedra"],
@@ -112,7 +112,7 @@
 		"Que você nunca precise da ajuda que hoje negou."
 	  ],
 	  "weight": 1,
-	  "image": "res://sprites/npcs/indio1.png",
+	  "image": "res://Sprites/npcs/indio1.png",
 	  "items": ["Bálsamo Curativo", "Madeira", "Linha"],
 	  "quantity": [1, 2, 3],
 	  "brought_items": ["Erva Medicinal"],
@@ -138,7 +138,7 @@
 		"Eu não esquecerei que você negou essa chance ao nosso povo."
 	  ],
 	  "weight": 1,
-	  "image": "res://sprites/npcs/indio2.png",
+	  "image": "res://Sprites/npcs/indio2.png",
 	  "items": ["Arcabuz", "Munição"],
 	  "quantity": [1, 2],
 	  "brought_items": ["Madeira", "Pedra", "Pena"],
@@ -164,7 +164,7 @@
 		"Não esquecerei sua recusa. O tempo mostrará as consequências dessa escolha."
 	  ],
 	  "weight": 1,
-	  "image": "res://sprites/npcs/indio1.png",
+	  "image": "res://Sprites/npcs/indio1.png",
 	  "items": ["Ferro"],
 	  "quantity": [5],
 	  "brought_items": ["Pólvora"],
@@ -191,7 +191,7 @@
 		"Que você não se arrependa dessa escolha quando eu mais precisar e você não estiver lá."
 	  ],
 	  "weight": -1,
-	  "image": "res://sprites/npcs/port1.png",
+	  "image": "res://Sprites/npcs/port1.png",
 	  "items": ["Arcabuz", "Munição"],
 	  "brought_items": ["Pólvora", "Ferro"],
 	  "brought_items_quantity": [2, 2],
@@ -217,7 +217,7 @@
 		"Não se esqueça de que aqueles que não colaboram conosco podem enfrentar tempos difíceis."
 	  ],
 	  "weight": -1,
-	  "image": "res://sprites/npcs/port2.png",
+	  "image": "res://Sprites/npcs/port2.png",
 	  "items": ["Tinta"],
 	  "brought_items": ["Pau-Brasil"],
 	  "brought_items_quantity": [2],
@@ -244,7 +244,7 @@
 		"Não esquecerei essa recusa, e o fogo que enfrento pode muito bem se voltar contra você."
 	  ],
 	  "weight": -1,
-	  "image": "res://sprites/npcs/port1.png",
+	  "image": "res://Sprites/npcs/port1.png",
 	  "items": ["Pólvora", "Ferro", "Munição"],
 	  "brought_items": ["Veneno"],
 	  "brought_items_quantity": [1],
@@ -270,7 +270,7 @@
 		"Lembre-se, artesão, que aqueles que se recusam a ajudar podem acabar caindo junto com os inimigos."
 	  ],
 	  "weight": -1,
-	  "image": "res://sprites/npcs/port2.png",
+	  "image": "res://Sprites/npcs/port2.png",
 	  "items": ["Tinta Envenenada"],
 	  "quantity": [2],
 	  "brought_items": ["Pau-Brasil", "Tinta"],
@@ -295,7 +295,7 @@
 		"Espero que não se arrependa de ter negado uma oferta como essa, artesão."
 	  ],
 	  "weight": -1,
-	  "image": "res://sprites/npcs/port1.png",
+	  "image": "res://Sprites/npcs/port1.png",
 	  "items": ["Pedra"],
 	  "brought_items": ["Pena"],
 	  "brought_items_quantity": [15],
@@ -321,7 +321,7 @@
 		"Sua recusa será lembrada, e pode custar vidas. Que isso não recaia sobre você."
 	  ],
 	  "weight": -1,
-	  "image": "res://sprites/npcs/port2.png",
+	  "image": "res://Sprites/npcs/port2.png",
 	  "items": ["Bálsamo Curativo", "Couro"],
 	  "brought_items": ["Erva Medicinal"],
 	  "brought_items_quantity": [5],
@@ -347,7 +347,7 @@
 		"Que você não se arrependa de ter negado essa oportunidade. Vou me lembrar disso."
 	  ],
 	  "weight": -1,
-	  "image": "res://sprites/npcs/port1.png",
+	  "image": "res://Sprites/npcs/port1.png",
 	  "items": ["Arcabuz"],
 	  "brought_items": ["Pau-Brasil", "Ferro"],
 	  "brought_items_quantity": [5, 5],
