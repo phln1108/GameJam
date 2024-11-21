@@ -108,7 +108,7 @@
 	  "image": "res://Sprites/Items/bow.png",
 	  "description": "Uma arma antiga, mas ainda temida por sua precisão e silêncio.",
 	  "craft_items": ["Madeira", "Linha"],
-	  "craft_quantity": [2, 3],
+	  "craft_quantity": [1, 2],
 	  "output": 1,
 	  "know": false
 	},

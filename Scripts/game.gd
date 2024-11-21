@@ -1,6 +1,5 @@
 extends Node
 
-
 @export  var tent: Control
 @export var crafting: Control
 @export var notes: Control
@@ -36,3 +35,7 @@ func _on_go_to_crafting() -> void:
 func _on_go_to_notes() -> void:
 	tent.visible = false
 	change_visibility(notes,true)
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("esc"):
+		get_tree().change_scene_to_file("res://Scenes/Menu.tscn")

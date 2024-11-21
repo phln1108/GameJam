@@ -35,7 +35,6 @@ func _input(event: InputEvent) -> void:
 		if is_typing:
 			$Label.text = dialogue_text
 			is_typing = false
-			SignalBuss.npc_stop_talking.emit()
 		else:
 			if current_dialogue < len(dialogues) - 1:
 				current_dialogue += 1
@@ -45,7 +44,6 @@ func _input(event: InputEvent) -> void:
 				finished_dialogue.emit()
 				show_requirements()
 				started = false
-				SignalBuss.npc_stop_talking.emit()
 
 func show_dialogue():
 	SignalBuss.npc_start_talking.emit()
@@ -60,7 +58,6 @@ func _type():
 	if is_typing:
 		if current_char == dialogue_text.length():
 			is_typing = false
-			SignalBuss.npc_stop_talking.emit()
 		else:
 			$Label.text += dialogue_text[current_char]
 			current_char += 1
@@ -100,6 +97,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_g18ni")
+dialogues = null
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

@@ -17,11 +17,15 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SignalBus="*res://Scripts/singletons/signal_bus.gd"
+SignalBuss="*res://Scripts/singletons/signal_bus.gd"
 ItemManager="*res://Scripts/singletons/item_manager.gd"
 HistoryController="*res://Scripts/singletons/history_controller.gd"
 SoundManager="*res://Scenes/singleton/soundManager.tscn"
 Ending="*res://Scenes/singleton/ending.tscn"
+
+[debug]
+
+gdscript/warnings/unused_signal=0
 
 [display]
 
@@ -41,6 +45,11 @@ theme/default_font_multichannel_signed_distance_field=true
 skip_dialogue={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
+esc={
+"deadzone": 0.5,
+"events": [null, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
 

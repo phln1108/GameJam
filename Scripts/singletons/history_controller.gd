@@ -27,7 +27,6 @@ var limit := 6
 # +1: indios
 # indios win > > neutro >  > portugueses win
 var wheight: int = 0
-		
 
 func _ready() -> void:
 	npcs = NpcParser.get_json_data()

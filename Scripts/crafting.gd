@@ -35,6 +35,8 @@ func craft_item(item: Craftable):
 	ItemManager.inventory[item.name].quantity += item.output
 	
 	ItemManager.inventory_update.emit()
+	
+	$AnimatedSprite2D.play("explosion")
 
 
 # Guarda os nomes dos itens on array

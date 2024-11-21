@@ -1,7 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8kiu8g8xdu73"]
+[gd_scene load_steps=11 format=3 uid="uid://b8kiu8g8xdu73"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_5clg5"]
 [ext_resource type="FontFile" uid="uid://bxywmu6nfkka0" path="res://assets/fonts/Alkhemikal.ttf" id="1_nvmp5"]
+[ext_resource type="Texture2D" uid="uid://c4q12gl27u455" path="res://Sprites/beach.png" id="2_eb5h0"]
+[ext_resource type="Texture2D" uid="uid://b8f3fvty1ssm5" path="res://Sprites/tent.png" id="3_vdloq"]
+[ext_resource type="Texture2D" uid="uid://dvy7gxbbx5huj" path="res://Sprites/UI/banner.tres" id="4_0mhyn"]
+[ext_resource type="Texture2D" uid="uid://ct6nsykgj7v1f" path="res://Sprites/UI/buttonNormal.tres" id="5_fr2y6"]
+[ext_resource type="Texture2D" uid="uid://kmq4qr540inx" path="res://Sprites/UI/buttonPressed.tres" id="6_a2bjs"]
+[ext_resource type="Texture2D" uid="uid://bwhp2hqhhxoy2" path="res://Sprites/UI/buttonHover.tres" id="7_yc3ut"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t6p5q"]
 font = ExtResource("1_nvmp5")
@@ -20,6 +26,26 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5clg5")
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 80.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_eb5h0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_vdloq")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -27,7 +53,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+mouse_filter = 2
+color = Color(0, 0, 0, 0.788235)
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 60.0
+offset_right = 185.0
+offset_bottom = 100.0
+scale = Vector2(10, 10)
+texture = ExtResource("4_0mhyn")
+stretch_mode = 2
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -43,40 +80,75 @@ text = "Conflitos Forjados"
 label_settings = SubResource("LabelSettings_t6p5q")
 horizontal_alignment = 1
 
-[node name="start" type="Button" parent="."]
+[node name="start" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -74.0
-offset_top = 61.0
-offset_right = 74.0
-offset_bottom = 135.0
+offset_left = -190.0
+offset_top = -80.0
+offset_right = -154.0
+offset_bottom = -67.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(10, 10)
 theme = SubResource("Theme_owa77")
-text = "Sair
-"
+texture_normal = ExtResource("5_fr2y6")
+texture_pressed = ExtResource("6_a2bjs")
+texture_hover = ExtResource("7_yc3ut")
 
-[node name="quit" type="Button" parent="."]
+[node name="Label" type="Label" parent="start"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -15.0
+offset_top = 1.0
+offset_right = 285.0
+offset_bottom = 65.0
+grow_horizontal = 2
+scale = Vector2(0.1, 0.1)
+text = "Jogar"
+label_settings = SubResource("LabelSettings_t6p5q")
+horizontal_alignment = 1
+
+[node name="quit" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -74.0
-offset_top = -86.0
-offset_right = 74.0
-offset_bottom = -12.0
+offset_left = -190.0
+offset_top = 100.0
+offset_right = -154.0
+offset_bottom = 113.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(10, 10)
 theme = SubResource("Theme_owa77")
-text = "Jogar"
+texture_normal = ExtResource("5_fr2y6")
+texture_pressed = ExtResource("6_a2bjs")
+texture_hover = ExtResource("7_yc3ut")
+
+[node name="Label" type="Label" parent="quit"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -15.0
+offset_top = 1.0
+offset_right = 285.0
+offset_bottom = 65.0
+grow_horizontal = 2
+scale = Vector2(0.1, 0.1)
+text = "Sair"
+label_settings = SubResource("LabelSettings_t6p5q")
+horizontal_alignment = 1
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="start" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_start_pressed"]

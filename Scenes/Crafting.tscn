@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cud7wtxkj3mrw"]
+[gd_scene load_steps=26 format=3 uid="uid://cud7wtxkj3mrw"]
 
 [ext_resource type="Script" path="res://Scripts/crafting.gd" id="1_bvgvc"]
 [ext_resource type="Texture2D" uid="uid://bfmk6l1ca1cc7" path="res://Sprites/UI/table.png" id="2_bnqii"]
+[ext_resource type="Texture2D" uid="uid://b4frfsr2le8ko" path="res://Sprites/vfx/Smoke VFX 2.png" id="3_0eqke"]
 [ext_resource type="Texture2D" uid="uid://eq48mevujqg5" path="res://Sprites/UI/hammer.png" id="3_8oys2"]
 [ext_resource type="FontFile" uid="uid://bxywmu6nfkka0" path="res://assets/fonts/Alkhemikal.ttf" id="4_62nc2"]
 [ext_resource type="Script" path="res://Scripts/deposit.gd" id="5_b8xqm"]
@@ -9,6 +10,115 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvx8i"]
 size = Vector2(32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hc6ok"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54rik"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1ma0"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csbu0"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfiam"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33uar"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ut6y"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aaeu1"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro2j5"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1pog"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oojks"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrsi4"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbocj"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iivfe"]
+atlas = ExtResource("3_0eqke")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f7oeg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hc6ok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54rik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1ma0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csbu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfiam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33uar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ut6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aaeu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro2j5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1pog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oojks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrsi4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbocj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbocj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iivfe")
+}],
+"loop": false,
+"name": &"explosion",
+"speed": 15.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sy10w"]
 font = ExtResource("4_62nc2")
@@ -35,6 +145,10 @@ texture = ExtResource("2_bnqii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crafter"]
 shape = SubResource("RectangleShape2D_nvx8i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Crafter"]
+sprite_frames = SubResource("SpriteFrames_f7oeg")
+animation = &"explosion"
 
 [node name="CraftButton" type="TextureButton" parent="."]
 layout_mode = 0

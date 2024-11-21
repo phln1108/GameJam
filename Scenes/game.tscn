@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://idlax0qtqn0y"]
+[gd_scene load_steps=16 format=3 uid="uid://idlax0qtqn0y"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_c1g3l"]
 [ext_resource type="Texture2D" uid="uid://b8f3fvty1ssm5" path="res://Sprites/tent.png" id="1_yteoa"]
@@ -11,6 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://dqbps2eaycq4l" path="res://Scenes/book.tscn" id="7_6ts4o"]
 [ext_resource type="Texture2D" uid="uid://b4f0ljh6yd3xk" path="res://Sprites/UI/xiiiis.png" id="8_j7swr"]
 [ext_resource type="Texture2D" uid="uid://c6cx668hqpgcy" path="res://Sprites/UI/setinha.png" id="8_lld6u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xanpi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7e3vo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ab1se"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cfk3q"]
 
 [node name="Game" type="Control" node_paths=PackedStringArray("tent", "crafting", "notes")]
 layout_mode = 3
@@ -68,6 +76,8 @@ offset_left = 30.0
 offset_top = 420.0
 offset_right = 230.0
 offset_bottom = 600.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xanpi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7e3vo")
 flat = true
 
 [node name="go_notes" type="Button" parent="Tent"]
@@ -76,6 +86,8 @@ offset_left = 850.0
 offset_top = 440.0
 offset_right = 1010.0
 offset_bottom = 600.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ab1se")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cfk3q")
 flat = true
 
 [node name="skip" type="TextureButton" parent="Tent"]

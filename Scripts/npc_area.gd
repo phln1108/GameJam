@@ -10,10 +10,15 @@ var speed  := 200
 var max_rotation = deg_to_rad(3)
 var step_rotation= deg_to_rad(.5)
 
+var distortion_ratio: = .25
+var distortion_step: = .05
+
 var target :Control 
 
 #se é a fala final
 var ending = false
+
+var is_npc_talking: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,22 +26,36 @@ func _ready() -> void:
 	HistoryController.get_random_npc()
 	HistoryController.requirements_completed.connect(_on_complete_requirements)
 	
+	SignalBuss.npc_start_talking.connect(_on_npc_start_talking)
+	SignalBuss.npc_stop_talking.connect(_on_npc_stop_talking)
+	
 	dialogue.finished_dialogue.connect(_on_finished_dialogue)
 	
 	skip_button.pressed.connect(_on_skip)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if is_npc_talking:
+		npc_sprite.scale += Vector2(0,distortion_step)
+		if absf(npc_sprite.scale.x - npc_sprite.scale.y) > distortion_ratio:
+			distortion_step *= -1
+	
 	if walk_npc:
 		npc_sprite.rotation += step_rotation
 		if absf(npc_sprite.rotation) > max_rotation:
 			step_rotation *= -1
+		
+		
+		#npc_sprite.scale += Vector2(0,distortion_step)
+		#if absf(npc_sprite.scale.x - npc_sprite.scale.y) > distortion_ratio:
+			#distortion_step *= -1
 		
 		var distance: Vector2 = (target.position - npc_sprite.position).normalized()
 		npc_sprite.position += distance * speed * delta
 		
 		if distance.x < .1:
 			walk_npc = false
+			npc_sprite.scale = Vector2(npc_sprite.scale.x,npc_sprite.scale.x)
 			if target == $NpcStopPoint:
 				skip_button.visible = true
 				
@@ -96,3 +115,10 @@ func _on_finished_dialogue():
 		dialogue.hide_dialogue()
 		walk_npc = true
 		ending = false
+		
+func _on_npc_start_talking():
+	is_npc_talking = true
+	
+func _on_npc_stop_talking():
+	is_npc_talking = false
+	npc_sprite.scale = Vector2(npc_sprite.scale.x,npc_sprite.scale.x)
